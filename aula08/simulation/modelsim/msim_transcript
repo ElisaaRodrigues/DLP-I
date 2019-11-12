@@ -1,0 +1,74 @@
+# do array_slice_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /opt/altera/13.0sp1/modelsim_ae/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/13.0sp1/modelsim_ae/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/elisa.r/DLP/aula08/array_slicesv2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Compiling entity array_slicesv2
+# -- Compiling architecture array_slices of array_slicesv2
+# 
+vsim work.array_slicesv2
+# vsim work.array_slicesv2 
+# //  ModelSim ALTERA 10.1d Nov  2 2012 Linux 4.15.18-19-pve
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading std.standard
+# Loading work.array_slicesv2(array_slices)
+vcom -93 -work work -O0 /home/elisa.r/DLP/aula08/array_slicesv2.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Compiling entity array_slicesv2
+# -- Compiling architecture array_slices of array_slicesv2
+vcom -93 -work work -O0 /home/elisa.r/DLP/aula08/array_slicesv2.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Compiling entity array_slicesv2
+# -- Compiling architecture array_slices of array_slicesv2
+wave create -pattern none -portmode in -language vhdl /array_slicesv2/row
+# Waveform for signal "Edit:/array_slicesv2/row "cannot be created.
+# Wave creation for user defined types not supported.
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+wave create -pattern none -portmode in -language vhdl /array_slicesv2/column
+# Waveform for signal "Edit:/array_slicesv2/column "cannot be created.
+# Wave creation for user defined types not supported.
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+wave create -pattern none -portmode out -language vhdl /array_slicesv2/slice1
+# array_slicesv2
+wave create -pattern none -portmode out -language vhdl -range 1 2 /array_slicesv2/slice2
+# array_slicesv2
+wave create -pattern none -portmode out -language vhdl -range 1 4 /array_slicesv2/slice3
+# array_slicesv2
+wave create -pattern none -portmode out -language vhdl -range 1 3 /array_slicesv2/slice4
+# array_slicesv2
+add wave -position end  sim:/array_slicesv2/row
+add wave -position end  sim:/array_slicesv2/column
+add wave -position end  sim:/array_slicesv2/slice1
+add wave -position end  sim:/array_slicesv2/slice2
+add wave -position end  sim:/array_slicesv2/slice3
+add wave -position end  sim:/array_slicesv2/slice4
+add wave -position end  sim:/array_slicesv2/table
+force -freeze sim:/array_slicesv2/row 1 0
+force -freeze sim:/array_slicesv2/column 1 0
+run
+force -freeze sim:/array_slicesv2/row 3 0
+run
+noforce sim:/array_slicesv2/row
+force -freeze sim:/array_slicesv2/row 1 0
+force -freeze sim:/array_slicesv2/column 3 0
+run

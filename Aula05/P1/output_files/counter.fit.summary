@@ -1,0 +1,9 @@
+Fitter Status : Successful - Wed Aug  7 11:56:27 2019
+Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : counter
+Top-level Entity Name : COUNTER
+Family : MAX7000AE
+Device : EPM7128AETA144-10
+Timing Models : Final
+Total macrocells : 32 / 128 ( 25 % )
+Total pins : 71 / 100 ( 71 % )

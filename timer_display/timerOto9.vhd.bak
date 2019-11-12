@@ -1,0 +1,33 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity timerOto9 is
+
+port(
+		rts, clk, sl: in std_logic;
+		ssd_out: out std_logic_vector(6 downto 0)
+	);
+
+end entity;
+
+architecture ifsc1 of timerOto9 is
+
+begin
+conta:
+	process(rst, clk) is
+		variable count : integer range 0 to 9;
+		begin
+		
+			if (rst='1') then	
+				count <= 0;
+			elsif(rising_edge(clk)) then
+				if count = 9 then
+					count <= o
+				else	
+					count <= count + 1;
+				end if;
+			end if;
+	end process;
+
+
+end architecture;

@@ -1,0 +1,23 @@
+|timerOto9
+rst => \div_clk:count[0].ACLR
+rst => \div_clk:count[1].ACLR
+rst => \div_clk:count[2].ACLR
+rst => \div_clk:count[3].ACLR
+rst => \conta:count[0].ACLR
+rst => \conta:count[1].ACLR
+rst => \conta:count[2].ACLR
+rst => \conta:count[3].ACLR
+clk => \conta:count[0].CLK
+clk => \conta:count[1].CLK
+clk => \conta:count[2].CLK
+clk => \conta:count[3].CLK
+sl => ~NO_FANOUT~
+ssd_out[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+ssd_out[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+ssd_out[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+ssd_out[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+ssd_out[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+ssd_out[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+ssd_out[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

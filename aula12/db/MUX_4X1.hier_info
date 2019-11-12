@@ -1,0 +1,12 @@
+|andN
+x[7] => fio.IN1
+x[6] => fio[6].IN1
+x[5] => fio[5].IN1
+x[4] => fio[4].IN1
+x[3] => fio[3].IN1
+x[2] => fio[2].IN1
+x[1] => fio[1].IN0
+x[0] => fio[1].IN1
+y <= fio.DB_MAX_OUTPUT_PORT_TYPE
+
+

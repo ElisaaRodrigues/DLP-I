@@ -1,0 +1,543 @@
+TimeQuest Timing Analyzer report for binTObcd
+Tue Sep 24 18:16:14 2019
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Clock Transfers
+ 14. Report TCCS
+ 15. Report RSKM
+ 16. Unconstrained Paths
+ 17. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                       ;
++--------------------+--------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version ;
+; Revision Name      ; binTObcd                                                           ;
+; Device Family      ; Cyclone                                                            ;
+; Device Name        ; EP1C3T100A8                                                        ;
+; Timing Models      ; Final                                                              ;
+; Delay Model        ; Slow Model                                                         ;
+; Rise/Fall Delays   ; Unavailable                                                        ;
++--------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 40          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-40        ;   0.0%      ;
++----------------------------+-------------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+----------------
+; Fmax Summary ;
+----------------
+No paths to report.
+
+
+-----------------
+; Setup Summary ;
+-----------------
+No paths to report.
+
+
+----------------
+; Hold Summary ;
+----------------
+No paths to report.
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
+-------------------------------
+; Minimum Pulse Width Summary ;
+-------------------------------
+No paths to report.
+
+
++-------------------------------------------------------+
+; Propagation Delay                                     ;
++-------------+-------------+--------+----+----+--------+
+; Input Port  ; Output Port ; RR     ; RF ; FR ; FF     ;
++-------------+-------------+--------+----+----+--------+
+; binario[0]  ; unidade[0]  ; 9.377  ;    ;    ; 9.377  ;
+; binario[1]  ; dezena[0]   ; 12.361 ;    ;    ; 12.361 ;
+; binario[1]  ; unidade[1]  ; 15.372 ;    ;    ; 15.372 ;
+; binario[1]  ; unidade[2]  ; 15.487 ;    ;    ; 15.487 ;
+; binario[1]  ; unidade[3]  ; 15.108 ;    ;    ; 15.108 ;
+; binario[2]  ; centena[0]  ; 14.404 ;    ;    ; 14.404 ;
+; binario[2]  ; dezena[0]   ; 31.987 ;    ;    ; 31.987 ;
+; binario[2]  ; dezena[1]   ; 29.202 ;    ;    ; 29.202 ;
+; binario[2]  ; dezena[2]   ; 25.009 ;    ;    ; 25.009 ;
+; binario[2]  ; dezena[3]   ; 20.587 ;    ;    ; 20.587 ;
+; binario[2]  ; unidade[1]  ; 34.543 ;    ;    ; 34.543 ;
+; binario[2]  ; unidade[2]  ; 34.658 ;    ;    ; 34.658 ;
+; binario[2]  ; unidade[3]  ; 34.279 ;    ;    ; 34.279 ;
+; binario[3]  ; centena[0]  ; 37.737 ;    ;    ; 37.737 ;
+; binario[3]  ; centena[1]  ; 31.563 ;    ;    ; 31.563 ;
+; binario[3]  ; centena[2]  ; 27.097 ;    ;    ; 27.097 ;
+; binario[3]  ; centena[3]  ; 22.312 ;    ;    ; 22.312 ;
+; binario[3]  ; dezena[0]   ; 55.085 ;    ;    ; 55.085 ;
+; binario[3]  ; dezena[1]   ; 52.300 ;    ;    ; 52.300 ;
+; binario[3]  ; dezena[2]   ; 48.107 ;    ;    ; 48.107 ;
+; binario[3]  ; dezena[3]   ; 43.685 ;    ;    ; 43.685 ;
+; binario[3]  ; milhar[0]   ; 14.143 ;    ;    ; 14.143 ;
+; binario[3]  ; unidade[1]  ; 57.641 ;    ;    ; 57.641 ;
+; binario[3]  ; unidade[2]  ; 57.756 ;    ;    ; 57.756 ;
+; binario[3]  ; unidade[3]  ; 57.377 ;    ;    ; 57.377 ;
+; binario[4]  ; centena[0]  ; 41.940 ;    ;    ; 41.940 ;
+; binario[4]  ; centena[1]  ; 35.766 ;    ;    ; 35.766 ;
+; binario[4]  ; centena[2]  ; 31.300 ;    ;    ; 31.300 ;
+; binario[4]  ; centena[3]  ; 26.515 ;    ;    ; 26.515 ;
+; binario[4]  ; dezena[0]   ; 59.288 ;    ;    ; 59.288 ;
+; binario[4]  ; dezena[1]   ; 56.503 ;    ;    ; 56.503 ;
+; binario[4]  ; dezena[2]   ; 52.310 ;    ;    ; 52.310 ;
+; binario[4]  ; dezena[3]   ; 47.888 ;    ;    ; 47.888 ;
+; binario[4]  ; milhar[0]   ; 19.058 ;    ;    ; 19.058 ;
+; binario[4]  ; milhar[1]   ; 14.422 ;    ;    ; 14.422 ;
+; binario[4]  ; unidade[1]  ; 61.844 ;    ;    ; 61.844 ;
+; binario[4]  ; unidade[2]  ; 61.959 ;    ;    ; 61.959 ;
+; binario[4]  ; unidade[3]  ; 61.580 ;    ;    ; 61.580 ;
+; binario[5]  ; centena[0]  ; 46.345 ;    ;    ; 46.345 ;
+; binario[5]  ; centena[1]  ; 40.171 ;    ;    ; 40.171 ;
+; binario[5]  ; centena[2]  ; 35.705 ;    ;    ; 35.705 ;
+; binario[5]  ; centena[3]  ; 30.920 ;    ;    ; 30.920 ;
+; binario[5]  ; dezena[0]   ; 63.693 ;    ;    ; 63.693 ;
+; binario[5]  ; dezena[1]   ; 60.908 ;    ;    ; 60.908 ;
+; binario[5]  ; dezena[2]   ; 56.715 ;    ;    ; 56.715 ;
+; binario[5]  ; dezena[3]   ; 52.293 ;    ;    ; 52.293 ;
+; binario[5]  ; milhar[0]   ; 24.071 ;    ;    ; 24.071 ;
+; binario[5]  ; milhar[1]   ; 19.435 ;    ;    ; 19.435 ;
+; binario[5]  ; milhar[2]   ; 15.025 ;    ;    ; 15.025 ;
+; binario[5]  ; unidade[1]  ; 66.249 ;    ;    ; 66.249 ;
+; binario[5]  ; unidade[2]  ; 66.364 ;    ;    ; 66.364 ;
+; binario[5]  ; unidade[3]  ; 65.985 ;    ;    ; 65.985 ;
+; binario[6]  ; centena[0]  ; 51.721 ;    ;    ; 51.721 ;
+; binario[6]  ; centena[1]  ; 45.547 ;    ;    ; 45.547 ;
+; binario[6]  ; centena[2]  ; 41.081 ;    ;    ; 41.081 ;
+; binario[6]  ; centena[3]  ; 36.296 ;    ;    ; 36.296 ;
+; binario[6]  ; dezena[0]   ; 69.069 ;    ;    ; 69.069 ;
+; binario[6]  ; dezena[1]   ; 66.284 ;    ;    ; 66.284 ;
+; binario[6]  ; dezena[2]   ; 62.091 ;    ;    ; 62.091 ;
+; binario[6]  ; dezena[3]   ; 57.669 ;    ;    ; 57.669 ;
+; binario[6]  ; milhar[0]   ; 28.750 ;    ;    ; 28.750 ;
+; binario[6]  ; milhar[1]   ; 24.114 ;    ;    ; 24.114 ;
+; binario[6]  ; milhar[2]   ; 19.704 ;    ;    ; 19.704 ;
+; binario[6]  ; milhar[3]   ; 14.941 ;    ;    ; 14.941 ;
+; binario[6]  ; unidade[1]  ; 71.625 ;    ;    ; 71.625 ;
+; binario[6]  ; unidade[2]  ; 71.740 ;    ;    ; 71.740 ;
+; binario[6]  ; unidade[3]  ; 71.361 ;    ;    ; 71.361 ;
+; binario[7]  ; centena[0]  ; 51.942 ;    ;    ; 51.942 ;
+; binario[7]  ; centena[1]  ; 45.768 ;    ;    ; 45.768 ;
+; binario[7]  ; centena[2]  ; 41.302 ;    ;    ; 41.302 ;
+; binario[7]  ; centena[3]  ; 36.517 ;    ;    ; 36.517 ;
+; binario[7]  ; dezena[0]   ; 69.290 ;    ;    ; 69.290 ;
+; binario[7]  ; dezena[1]   ; 66.505 ;    ;    ; 66.505 ;
+; binario[7]  ; dezena[2]   ; 62.312 ;    ;    ; 62.312 ;
+; binario[7]  ; dezena[3]   ; 57.890 ;    ;    ; 57.890 ;
+; binario[7]  ; milhar[0]   ; 29.398 ;    ;    ; 29.398 ;
+; binario[7]  ; milhar[1]   ; 24.762 ;    ;    ; 24.762 ;
+; binario[7]  ; milhar[2]   ; 20.352 ;    ;    ; 20.352 ;
+; binario[7]  ; milhar[3]   ; 15.589 ;    ;    ; 15.589 ;
+; binario[7]  ; unidade[1]  ; 71.846 ;    ;    ; 71.846 ;
+; binario[7]  ; unidade[2]  ; 71.961 ;    ;    ; 71.961 ;
+; binario[7]  ; unidade[3]  ; 71.582 ;    ;    ; 71.582 ;
+; binario[8]  ; centena[0]  ; 53.485 ;    ;    ; 53.485 ;
+; binario[8]  ; centena[1]  ; 47.311 ;    ;    ; 47.311 ;
+; binario[8]  ; centena[2]  ; 42.845 ;    ;    ; 42.845 ;
+; binario[8]  ; centena[3]  ; 38.060 ;    ;    ; 38.060 ;
+; binario[8]  ; dezena[0]   ; 70.833 ;    ;    ; 70.833 ;
+; binario[8]  ; dezena[1]   ; 68.048 ;    ;    ; 68.048 ;
+; binario[8]  ; dezena[2]   ; 63.855 ;    ;    ; 63.855 ;
+; binario[8]  ; dezena[3]   ; 59.433 ;    ;    ; 59.433 ;
+; binario[8]  ; milhar[0]   ; 31.242 ;    ;    ; 31.242 ;
+; binario[8]  ; milhar[1]   ; 26.606 ;    ;    ; 26.606 ;
+; binario[8]  ; milhar[2]   ; 22.196 ;    ;    ; 22.196 ;
+; binario[8]  ; milhar[3]   ; 17.433 ;    ;    ; 17.433 ;
+; binario[8]  ; unidade[1]  ; 73.389 ;    ;    ; 73.389 ;
+; binario[8]  ; unidade[2]  ; 73.504 ;    ;    ; 73.504 ;
+; binario[8]  ; unidade[3]  ; 73.125 ;    ;    ; 73.125 ;
+; binario[9]  ; centena[0]  ; 53.220 ;    ;    ; 53.220 ;
+; binario[9]  ; centena[1]  ; 47.046 ;    ;    ; 47.046 ;
+; binario[9]  ; centena[2]  ; 42.580 ;    ;    ; 42.580 ;
+; binario[9]  ; centena[3]  ; 37.795 ;    ;    ; 37.795 ;
+; binario[9]  ; dezena[0]   ; 70.568 ;    ;    ; 70.568 ;
+; binario[9]  ; dezena[1]   ; 67.783 ;    ;    ; 67.783 ;
+; binario[9]  ; dezena[2]   ; 63.590 ;    ;    ; 63.590 ;
+; binario[9]  ; dezena[3]   ; 59.168 ;    ;    ; 59.168 ;
+; binario[9]  ; milhar[0]   ; 30.949 ;    ;    ; 30.949 ;
+; binario[9]  ; milhar[1]   ; 26.313 ;    ;    ; 26.313 ;
+; binario[9]  ; milhar[2]   ; 21.903 ;    ;    ; 21.903 ;
+; binario[9]  ; milhar[3]   ; 17.140 ;    ;    ; 17.140 ;
+; binario[9]  ; unidade[1]  ; 73.124 ;    ;    ; 73.124 ;
+; binario[9]  ; unidade[2]  ; 73.239 ;    ;    ; 73.239 ;
+; binario[9]  ; unidade[3]  ; 72.860 ;    ;    ; 72.860 ;
+; binario[10] ; centena[0]  ; 53.718 ;    ;    ; 53.718 ;
+; binario[10] ; centena[1]  ; 47.544 ;    ;    ; 47.544 ;
+; binario[10] ; centena[2]  ; 43.078 ;    ;    ; 43.078 ;
+; binario[10] ; centena[3]  ; 38.293 ;    ;    ; 38.293 ;
+; binario[10] ; dezena[0]   ; 71.066 ;    ;    ; 71.066 ;
+; binario[10] ; dezena[1]   ; 68.281 ;    ;    ; 68.281 ;
+; binario[10] ; dezena[2]   ; 64.088 ;    ;    ; 64.088 ;
+; binario[10] ; dezena[3]   ; 59.666 ;    ;    ; 59.666 ;
+; binario[10] ; milhar[0]   ; 31.502 ;    ;    ; 31.502 ;
+; binario[10] ; milhar[1]   ; 26.866 ;    ;    ; 26.866 ;
+; binario[10] ; milhar[2]   ; 22.456 ;    ;    ; 22.456 ;
+; binario[10] ; milhar[3]   ; 17.693 ;    ;    ; 17.693 ;
+; binario[10] ; unidade[1]  ; 73.622 ;    ;    ; 73.622 ;
+; binario[10] ; unidade[2]  ; 73.737 ;    ;    ; 73.737 ;
+; binario[10] ; unidade[3]  ; 73.358 ;    ;    ; 73.358 ;
+; binario[11] ; centena[0]  ; 53.841 ;    ;    ; 53.841 ;
+; binario[11] ; centena[1]  ; 47.667 ;    ;    ; 47.667 ;
+; binario[11] ; centena[2]  ; 43.201 ;    ;    ; 43.201 ;
+; binario[11] ; centena[3]  ; 38.416 ;    ;    ; 38.416 ;
+; binario[11] ; dezena[0]   ; 71.189 ;    ;    ; 71.189 ;
+; binario[11] ; dezena[1]   ; 68.404 ;    ;    ; 68.404 ;
+; binario[11] ; dezena[2]   ; 64.211 ;    ;    ; 64.211 ;
+; binario[11] ; dezena[3]   ; 59.789 ;    ;    ; 59.789 ;
+; binario[11] ; milhar[0]   ; 31.427 ;    ;    ; 31.427 ;
+; binario[11] ; milhar[1]   ; 26.791 ;    ;    ; 26.791 ;
+; binario[11] ; milhar[2]   ; 22.381 ;    ;    ; 22.381 ;
+; binario[11] ; milhar[3]   ; 17.618 ;    ;    ; 17.618 ;
+; binario[11] ; unidade[1]  ; 73.745 ;    ;    ; 73.745 ;
+; binario[11] ; unidade[2]  ; 73.860 ;    ;    ; 73.860 ;
+; binario[11] ; unidade[3]  ; 73.481 ;    ;    ; 73.481 ;
+; binario[12] ; centena[0]  ; 53.008 ;    ;    ; 53.008 ;
+; binario[12] ; centena[1]  ; 46.834 ;    ;    ; 46.834 ;
+; binario[12] ; centena[2]  ; 42.368 ;    ;    ; 42.368 ;
+; binario[12] ; centena[3]  ; 37.583 ;    ;    ; 37.583 ;
+; binario[12] ; dezena[0]   ; 70.356 ;    ;    ; 70.356 ;
+; binario[12] ; dezena[1]   ; 67.571 ;    ;    ; 67.571 ;
+; binario[12] ; dezena[2]   ; 63.378 ;    ;    ; 63.378 ;
+; binario[12] ; dezena[3]   ; 58.956 ;    ;    ; 58.956 ;
+; binario[12] ; milhar[0]   ; 30.654 ;    ;    ; 30.654 ;
+; binario[12] ; milhar[1]   ; 26.018 ;    ;    ; 26.018 ;
+; binario[12] ; milhar[2]   ; 21.608 ;    ;    ; 21.608 ;
+; binario[12] ; milhar[3]   ; 16.845 ;    ;    ; 16.845 ;
+; binario[12] ; unidade[1]  ; 72.912 ;    ;    ; 72.912 ;
+; binario[12] ; unidade[2]  ; 73.027 ;    ;    ; 73.027 ;
+; binario[12] ; unidade[3]  ; 72.648 ;    ;    ; 72.648 ;
+; binario[13] ; centena[0]  ; 53.009 ;    ;    ; 53.009 ;
+; binario[13] ; centena[1]  ; 46.835 ;    ;    ; 46.835 ;
+; binario[13] ; centena[2]  ; 42.369 ;    ;    ; 42.369 ;
+; binario[13] ; centena[3]  ; 37.584 ;    ;    ; 37.584 ;
+; binario[13] ; dezena[0]   ; 70.357 ;    ;    ; 70.357 ;
+; binario[13] ; dezena[1]   ; 67.572 ;    ;    ; 67.572 ;
+; binario[13] ; dezena[2]   ; 63.379 ;    ;    ; 63.379 ;
+; binario[13] ; dezena[3]   ; 58.957 ;    ;    ; 58.957 ;
+; binario[13] ; milhar[0]   ; 31.074 ;    ;    ; 31.074 ;
+; binario[13] ; milhar[1]   ; 26.438 ;    ;    ; 26.438 ;
+; binario[13] ; milhar[2]   ; 22.028 ;    ;    ; 22.028 ;
+; binario[13] ; milhar[3]   ; 17.265 ;    ;    ; 17.265 ;
+; binario[13] ; unidade[1]  ; 72.913 ;    ;    ; 72.913 ;
+; binario[13] ; unidade[2]  ; 73.028 ;    ;    ; 73.028 ;
+; binario[13] ; unidade[3]  ; 72.649 ;    ;    ; 72.649 ;
++-------------+-------------+--------+----+----+--------+
+
+
++-------------------------------------------------------+
+; Minimum Propagation Delay                             ;
++-------------+-------------+--------+----+----+--------+
+; Input Port  ; Output Port ; RR     ; RF ; FR ; FF     ;
++-------------+-------------+--------+----+----+--------+
+; binario[0]  ; unidade[0]  ; 9.377  ;    ;    ; 9.377  ;
+; binario[1]  ; dezena[0]   ; 12.170 ;    ;    ; 12.170 ;
+; binario[1]  ; unidade[1]  ; 11.025 ;    ;    ; 11.025 ;
+; binario[1]  ; unidade[2]  ; 14.832 ;    ;    ; 14.832 ;
+; binario[1]  ; unidade[3]  ; 14.914 ;    ;    ; 14.914 ;
+; binario[2]  ; centena[0]  ; 13.823 ;    ;    ; 13.823 ;
+; binario[2]  ; dezena[0]   ; 14.274 ;    ;    ; 14.274 ;
+; binario[2]  ; dezena[1]   ; 16.194 ;    ;    ; 16.194 ;
+; binario[2]  ; dezena[2]   ; 18.157 ;    ;    ; 18.157 ;
+; binario[2]  ; dezena[3]   ; 17.753 ;    ;    ; 17.753 ;
+; binario[2]  ; unidade[1]  ; 16.826 ;    ;    ; 16.826 ;
+; binario[2]  ; unidade[2]  ; 14.580 ;    ;    ; 14.580 ;
+; binario[2]  ; unidade[3]  ; 16.391 ;    ;    ; 16.391 ;
+; binario[3]  ; centena[0]  ; 17.693 ;    ;    ; 17.693 ;
+; binario[3]  ; centena[1]  ; 16.584 ;    ;    ; 16.584 ;
+; binario[3]  ; centena[2]  ; 18.783 ;    ;    ; 18.783 ;
+; binario[3]  ; centena[3]  ; 18.054 ;    ;    ; 18.054 ;
+; binario[3]  ; dezena[0]   ; 17.692 ;    ;    ; 17.692 ;
+; binario[3]  ; dezena[1]   ; 17.898 ;    ;    ; 17.898 ;
+; binario[3]  ; dezena[2]   ; 19.377 ;    ;    ; 19.377 ;
+; binario[3]  ; dezena[3]   ; 19.771 ;    ;    ; 19.771 ;
+; binario[3]  ; milhar[0]   ; 13.973 ;    ;    ; 13.973 ;
+; binario[3]  ; unidade[1]  ; 19.333 ;    ;    ; 19.333 ;
+; binario[3]  ; unidade[2]  ; 19.448 ;    ;    ; 19.448 ;
+; binario[3]  ; unidade[3]  ; 17.072 ;    ;    ; 17.072 ;
+; binario[4]  ; centena[0]  ; 16.767 ;    ;    ; 16.767 ;
+; binario[4]  ; centena[1]  ; 15.343 ;    ;    ; 15.343 ;
+; binario[4]  ; centena[2]  ; 16.286 ;    ;    ; 16.286 ;
+; binario[4]  ; centena[3]  ; 16.416 ;    ;    ; 16.416 ;
+; binario[4]  ; dezena[0]   ; 20.528 ;    ;    ; 20.528 ;
+; binario[4]  ; dezena[1]   ; 20.565 ;    ;    ; 20.565 ;
+; binario[4]  ; dezena[2]   ; 19.726 ;    ;    ; 19.726 ;
+; binario[4]  ; dezena[3]   ; 18.622 ;    ;    ; 18.622 ;
+; binario[4]  ; milhar[0]   ; 14.131 ;    ;    ; 14.131 ;
+; binario[4]  ; milhar[1]   ; 14.403 ;    ;    ; 14.403 ;
+; binario[4]  ; unidade[1]  ; 22.891 ;    ;    ; 22.891 ;
+; binario[4]  ; unidade[2]  ; 22.354 ;    ;    ; 22.354 ;
+; binario[4]  ; unidade[3]  ; 20.630 ;    ;    ; 20.630 ;
+; binario[5]  ; centena[0]  ; 19.096 ;    ;    ; 19.096 ;
+; binario[5]  ; centena[1]  ; 16.671 ;    ;    ; 16.671 ;
+; binario[5]  ; centena[2]  ; 16.216 ;    ;    ; 16.216 ;
+; binario[5]  ; centena[3]  ; 16.342 ;    ;    ; 16.342 ;
+; binario[5]  ; dezena[0]   ; 21.201 ;    ;    ; 21.201 ;
+; binario[5]  ; dezena[1]   ; 21.407 ;    ;    ; 21.407 ;
+; binario[5]  ; dezena[2]   ; 20.531 ;    ;    ; 20.531 ;
+; binario[5]  ; dezena[3]   ; 19.427 ;    ;    ; 19.427 ;
+; binario[5]  ; milhar[0]   ; 13.627 ;    ;    ; 13.627 ;
+; binario[5]  ; milhar[1]   ; 13.695 ;    ;    ; 13.695 ;
+; binario[5]  ; milhar[2]   ; 15.006 ;    ;    ; 15.006 ;
+; binario[5]  ; unidade[1]  ; 22.842 ;    ;    ; 22.842 ;
+; binario[5]  ; unidade[2]  ; 22.957 ;    ;    ; 22.957 ;
+; binario[5]  ; unidade[3]  ; 20.581 ;    ;    ; 20.581 ;
+; binario[6]  ; centena[0]  ; 20.129 ;    ;    ; 20.129 ;
+; binario[6]  ; centena[1]  ; 18.074 ;    ;    ; 18.074 ;
+; binario[6]  ; centena[2]  ; 18.251 ;    ;    ; 18.251 ;
+; binario[6]  ; centena[3]  ; 15.815 ;    ;    ; 15.815 ;
+; binario[6]  ; dezena[0]   ; 22.957 ;    ;    ; 22.957 ;
+; binario[6]  ; dezena[1]   ; 23.163 ;    ;    ; 23.163 ;
+; binario[6]  ; dezena[2]   ; 22.253 ;    ;    ; 22.253 ;
+; binario[6]  ; dezena[3]   ; 21.056 ;    ;    ; 21.056 ;
+; binario[6]  ; milhar[0]   ; 13.885 ;    ;    ; 13.885 ;
+; binario[6]  ; milhar[1]   ; 13.500 ;    ;    ; 13.500 ;
+; binario[6]  ; milhar[2]   ; 14.034 ;    ;    ; 14.034 ;
+; binario[6]  ; milhar[3]   ; 14.920 ;    ;    ; 14.920 ;
+; binario[6]  ; unidade[1]  ; 24.598 ;    ;    ; 24.598 ;
+; binario[6]  ; unidade[2]  ; 24.713 ;    ;    ; 24.713 ;
+; binario[6]  ; unidade[3]  ; 22.337 ;    ;    ; 22.337 ;
+; binario[7]  ; centena[0]  ; 18.712 ;    ;    ; 18.712 ;
+; binario[7]  ; centena[1]  ; 15.792 ;    ;    ; 15.792 ;
+; binario[7]  ; centena[2]  ; 14.889 ;    ;    ; 14.889 ;
+; binario[7]  ; centena[3]  ; 13.449 ;    ;    ; 13.449 ;
+; binario[7]  ; dezena[0]   ; 20.362 ;    ;    ; 20.362 ;
+; binario[7]  ; dezena[1]   ; 20.568 ;    ;    ; 20.568 ;
+; binario[7]  ; dezena[2]   ; 20.470 ;    ;    ; 20.470 ;
+; binario[7]  ; dezena[3]   ; 19.366 ;    ;    ; 19.366 ;
+; binario[7]  ; milhar[0]   ; 11.474 ;    ;    ; 11.474 ;
+; binario[7]  ; milhar[1]   ; 10.611 ;    ;    ; 10.611 ;
+; binario[7]  ; milhar[2]   ; 9.934  ;    ;    ; 9.934  ;
+; binario[7]  ; milhar[3]   ; 10.322 ;    ;    ; 10.322 ;
+; binario[7]  ; unidade[1]  ; 22.003 ;    ;    ; 22.003 ;
+; binario[7]  ; unidade[2]  ; 22.118 ;    ;    ; 22.118 ;
+; binario[7]  ; unidade[3]  ; 19.742 ;    ;    ; 19.742 ;
+; binario[8]  ; centena[0]  ; 22.199 ;    ;    ; 22.199 ;
+; binario[8]  ; centena[1]  ; 18.591 ;    ;    ; 18.591 ;
+; binario[8]  ; centena[2]  ; 17.833 ;    ;    ; 17.833 ;
+; binario[8]  ; centena[3]  ; 16.975 ;    ;    ; 16.975 ;
+; binario[8]  ; dezena[0]   ; 22.388 ;    ;    ; 22.388 ;
+; binario[8]  ; dezena[1]   ; 22.594 ;    ;    ; 22.594 ;
+; binario[8]  ; dezena[2]   ; 24.073 ;    ;    ; 24.073 ;
+; binario[8]  ; dezena[3]   ; 23.105 ;    ;    ; 23.105 ;
+; binario[8]  ; milhar[0]   ; 16.657 ;    ;    ; 16.657 ;
+; binario[8]  ; milhar[1]   ; 15.403 ;    ;    ; 15.403 ;
+; binario[8]  ; milhar[2]   ; 14.147 ;    ;    ; 14.147 ;
+; binario[8]  ; milhar[3]   ; 13.942 ;    ;    ; 13.942 ;
+; binario[8]  ; unidade[1]  ; 24.029 ;    ;    ; 24.029 ;
+; binario[8]  ; unidade[2]  ; 24.144 ;    ;    ; 24.144 ;
+; binario[8]  ; unidade[3]  ; 21.768 ;    ;    ; 21.768 ;
+; binario[9]  ; centena[0]  ; 21.811 ;    ;    ; 21.811 ;
+; binario[9]  ; centena[1]  ; 19.393 ;    ;    ; 19.393 ;
+; binario[9]  ; centena[2]  ; 18.577 ;    ;    ; 18.577 ;
+; binario[9]  ; centena[3]  ; 16.687 ;    ;    ; 16.687 ;
+; binario[9]  ; dezena[0]   ; 23.335 ;    ;    ; 23.335 ;
+; binario[9]  ; dezena[1]   ; 23.541 ;    ;    ; 23.541 ;
+; binario[9]  ; dezena[2]   ; 24.706 ;    ;    ; 24.706 ;
+; binario[9]  ; dezena[3]   ; 23.602 ;    ;    ; 23.602 ;
+; binario[9]  ; milhar[0]   ; 17.085 ;    ;    ; 17.085 ;
+; binario[9]  ; milhar[1]   ; 15.812 ;    ;    ; 15.812 ;
+; binario[9]  ; milhar[2]   ; 13.729 ;    ;    ; 13.729 ;
+; binario[9]  ; milhar[3]   ; 14.705 ;    ;    ; 14.705 ;
+; binario[9]  ; unidade[1]  ; 24.976 ;    ;    ; 24.976 ;
+; binario[9]  ; unidade[2]  ; 25.091 ;    ;    ; 25.091 ;
+; binario[9]  ; unidade[3]  ; 22.715 ;    ;    ; 22.715 ;
+; binario[10] ; centena[0]  ; 22.295 ;    ;    ; 22.295 ;
+; binario[10] ; centena[1]  ; 20.871 ;    ;    ; 20.871 ;
+; binario[10] ; centena[2]  ; 20.435 ;    ;    ; 20.435 ;
+; binario[10] ; centena[3]  ; 18.806 ;    ;    ; 18.806 ;
+; binario[10] ; dezena[0]   ; 23.643 ;    ;    ; 23.643 ;
+; binario[10] ; dezena[1]   ; 23.849 ;    ;    ; 23.849 ;
+; binario[10] ; dezena[2]   ; 25.254 ;    ;    ; 25.254 ;
+; binario[10] ; dezena[3]   ; 24.150 ;    ;    ; 24.150 ;
+; binario[10] ; milhar[0]   ; 17.145 ;    ;    ; 17.145 ;
+; binario[10] ; milhar[1]   ; 16.473 ;    ;    ; 16.473 ;
+; binario[10] ; milhar[2]   ; 14.940 ;    ;    ; 14.940 ;
+; binario[10] ; milhar[3]   ; 15.010 ;    ;    ; 15.010 ;
+; binario[10] ; unidade[1]  ; 25.284 ;    ;    ; 25.284 ;
+; binario[10] ; unidade[2]  ; 25.399 ;    ;    ; 25.399 ;
+; binario[10] ; unidade[3]  ; 23.023 ;    ;    ; 23.023 ;
+; binario[11] ; centena[0]  ; 24.278 ;    ;    ; 24.278 ;
+; binario[11] ; centena[1]  ; 21.960 ;    ;    ; 21.960 ;
+; binario[11] ; centena[2]  ; 21.202 ;    ;    ; 21.202 ;
+; binario[11] ; centena[3]  ; 19.951 ;    ;    ; 19.951 ;
+; binario[11] ; dezena[0]   ; 25.640 ;    ;    ; 25.640 ;
+; binario[11] ; dezena[1]   ; 25.846 ;    ;    ; 25.846 ;
+; binario[11] ; dezena[2]   ; 26.557 ;    ;    ; 26.557 ;
+; binario[11] ; dezena[3]   ; 25.453 ;    ;    ; 25.453 ;
+; binario[11] ; milhar[0]   ; 17.790 ;    ;    ; 17.790 ;
+; binario[11] ; milhar[1]   ; 16.141 ;    ;    ; 16.141 ;
+; binario[11] ; milhar[2]   ; 14.784 ;    ;    ; 14.784 ;
+; binario[11] ; milhar[3]   ; 14.772 ;    ;    ; 14.772 ;
+; binario[11] ; unidade[1]  ; 27.281 ;    ;    ; 27.281 ;
+; binario[11] ; unidade[2]  ; 27.396 ;    ;    ; 27.396 ;
+; binario[11] ; unidade[3]  ; 25.020 ;    ;    ; 25.020 ;
+; binario[12] ; centena[0]  ; 22.499 ;    ;    ; 22.499 ;
+; binario[12] ; centena[1]  ; 20.781 ;    ;    ; 20.781 ;
+; binario[12] ; centena[2]  ; 20.054 ;    ;    ; 20.054 ;
+; binario[12] ; centena[3]  ; 18.188 ;    ;    ; 18.188 ;
+; binario[12] ; dezena[0]   ; 23.260 ;    ;    ; 23.260 ;
+; binario[12] ; dezena[1]   ; 23.466 ;    ;    ; 23.466 ;
+; binario[12] ; dezena[2]   ; 24.794 ;    ;    ; 24.794 ;
+; binario[12] ; dezena[3]   ; 23.690 ;    ;    ; 23.690 ;
+; binario[12] ; milhar[0]   ; 17.002 ;    ;    ; 17.002 ;
+; binario[12] ; milhar[1]   ; 16.139 ;    ;    ; 16.139 ;
+; binario[12] ; milhar[2]   ; 13.734 ;    ;    ; 13.734 ;
+; binario[12] ; milhar[3]   ; 13.415 ;    ;    ; 13.415 ;
+; binario[12] ; unidade[1]  ; 24.901 ;    ;    ; 24.901 ;
+; binario[12] ; unidade[2]  ; 25.016 ;    ;    ; 25.016 ;
+; binario[12] ; unidade[3]  ; 22.640 ;    ;    ; 22.640 ;
+; binario[13] ; centena[0]  ; 22.404 ;    ;    ; 22.404 ;
+; binario[13] ; centena[1]  ; 20.613 ;    ;    ; 20.613 ;
+; binario[13] ; centena[2]  ; 19.909 ;    ;    ; 19.909 ;
+; binario[13] ; centena[3]  ; 18.020 ;    ;    ; 18.020 ;
+; binario[13] ; dezena[0]   ; 23.473 ;    ;    ; 23.473 ;
+; binario[13] ; dezena[1]   ; 23.679 ;    ;    ; 23.679 ;
+; binario[13] ; dezena[2]   ; 24.626 ;    ;    ; 24.626 ;
+; binario[13] ; dezena[3]   ; 23.522 ;    ;    ; 23.522 ;
+; binario[13] ; milhar[0]   ; 17.422 ;    ;    ; 17.422 ;
+; binario[13] ; milhar[1]   ; 16.559 ;    ;    ; 16.559 ;
+; binario[13] ; milhar[2]   ; 15.882 ;    ;    ; 15.882 ;
+; binario[13] ; milhar[3]   ; 14.468 ;    ;    ; 14.468 ;
+; binario[13] ; unidade[1]  ; 25.114 ;    ;    ; 25.114 ;
+; binario[13] ; unidade[2]  ; 25.229 ;    ;    ; 25.229 ;
+; binario[13] ; unidade[3]  ; 22.853 ;    ;    ; 22.853 ;
++-------------+-------------+--------+----+----+--------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 14    ; 14   ;
+; Unconstrained Input Port Paths  ; 172   ; 172  ;
+; Unconstrained Output Ports      ; 16    ; 16   ;
+; Unconstrained Output Port Paths ; 172   ; 172  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Tue Sep 24 18:16:03 2019
+Info: Command: quartus_sta binTObcd -c binTObcd
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 40 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 16 of the 20 physical processors detected instead.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'binTObcd.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 309 megabytes
+    Info: Processing ended: Tue Sep 24 18:16:14 2019
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:01
+
+

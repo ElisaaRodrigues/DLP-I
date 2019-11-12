@@ -1,0 +1,12 @@
+	Entity MUX_N is
+		Generic(N: Natural := 4, S: Natural := 2);
+		Port(
+			X: IN bit_vector(N-1 Downto 0);
+			Y : OUT bit;
+			Sel: IN bit_vector(S-1 Downto 0)
+		);
+	End Entity;
+	Architecture IFSC of MUX_N is
+		BEGIN
+	End Architecture;
+	

@@ -1,0 +1,9 @@
+|incBIN
+bin_in[0] => Add0.IN6
+bin_in[1] => Add0.IN5
+bin_in[2] => Add0.IN4
+bin_out[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+bin_out[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+bin_out[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+

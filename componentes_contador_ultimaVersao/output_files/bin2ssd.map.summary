@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Oct 25 14:08:35 2019
+Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : bin2ssd
+Top-level Entity Name : timer0_9H
+Family : Cyclone IV E
+Total logic elements : 88
+    Total combinational functions : 88
+    Dedicated logic registers : 38
+Total registers : 38
+Total pins : 23
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

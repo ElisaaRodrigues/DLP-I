@@ -1,0 +1,8 @@
+|redundant_registers
+clk => b.CLK
+clk => a.CLK
+x => b.DATAIN
+x => a.DATAIN
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

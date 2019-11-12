@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, /home/elisa.r/DLP/Aula04/P2/flip_flop.vhd
+source_file = 1, /home/elisa.r/DLP/Aula04/P2/db/Vhdl2.cbx.xml
+source_file = 1, /opt/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, /opt/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, /opt/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, /opt/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = flip_flop
+instance = comp, \clk~I\, clk, flip_flop, 1
+instance = comp, \d~I\, d, flip_flop, 1
+instance = comp, \rst~I\, rst, flip_flop, 1
+instance = comp, \q~reg0\, q~reg0, flip_flop, 1
+instance = comp, \q~I\, q, flip_flop, 1

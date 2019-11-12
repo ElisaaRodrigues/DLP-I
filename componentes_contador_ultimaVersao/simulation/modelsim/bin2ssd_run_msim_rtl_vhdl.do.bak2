@@ -1,0 +1,11 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {/home/aluno/elisa/componentes_contador/bin2ssd.vhd}
+vcom -93 -work work {/home/aluno/elisa/componentes_contador/count_up.vhd}
+vcom -93 -work work {/home/aluno/elisa/componentes_contador/timer0_9H.vhd}
+

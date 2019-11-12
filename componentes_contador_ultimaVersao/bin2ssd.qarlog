@@ -1,0 +1,19 @@
+Quartus II Archive log --	/home/elisa.r/DLP/componentes_contador_ultimaVersao/bin2ssd.qarlog
+
+Archive:	/home/elisa.r/DLP/componentes_contador_ultimaVersao/bin2ssd.qar
+Date:		Fri Oct 25 13:46:02 2019
+Quartus II 32-bit		13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+
+	=========== Files Selected: ===========
+/home/elisa.r/DLP/componentes_contador_ultimaVersao/SDC1.sdc
+/home/elisa.r/DLP/componentes_contador_ultimaVersao/bin2ssd.qpf
+/home/elisa.r/DLP/componentes_contador_ultimaVersao/bin2ssd.qsf
+/home/elisa.r/DLP/componentes_contador_ultimaVersao/bin2ssd.vhd
+/home/elisa.r/DLP/componentes_contador_ultimaVersao/count_up.vhd
+/home/elisa.r/DLP/componentes_contador_ultimaVersao/incremental_db/compiled_partitions/bin2ssd.db_info
+/home/elisa.r/DLP/componentes_contador_ultimaVersao/timer0_9H.vhd
+/opt/altera/13.0sp1/quartus/linux/assignment_defaults.qdf
+	======= Total: 8 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

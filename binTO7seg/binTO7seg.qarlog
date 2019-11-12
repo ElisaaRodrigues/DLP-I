@@ -1,0 +1,16 @@
+Quartus II Archive log --	/home/elisa.r/DLP/binTO7seg/binTO7seg.qarlog
+
+Archive:	/home/elisa.r/DLP/binTO7seg/binTO7seg.qar
+Date:		Thu Oct 10 14:46:40 2019
+Quartus II 32-bit		13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+
+	=========== Files Selected: ===========
+/home/elisa.r/DLP/binTO7seg/binTO7seg.qpf
+/home/elisa.r/DLP/binTO7seg/binTO7seg.qsf
+/home/elisa.r/DLP/binTO7seg/binTO7seg.vhd
+/home/elisa.r/DLP/binTO7seg/incremental_db/compiled_partitions/binTO7seg.db_info
+/opt/altera/13.0sp1/quartus/linux/assignment_defaults.qdf
+	======= Total: 5 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

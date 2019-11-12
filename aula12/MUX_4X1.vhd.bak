@@ -1,0 +1,38 @@
+library ieee;
+
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity MUX_4x1 is
+	generic
+	(
+		
+	);
+
+
+	port
+	(
+		X0	: in 	std_logic;
+		X1	: in	std_logic;
+		X2	: in	std_logic;
+		X3	: in	std_logic;
+		sel : in std_logic_vector(1 downto 0);
+		y : out std_logic
+	);
+end entity;
+
+
+architecture arch_mux_1 of MUX_4x1 is
+
+begin
+
+
+end architecture;
+
+
+configuration conf_mux of MUX_4x1 is
+	for arch_mux_1
+	
+	
+	end for;
+end configuration;

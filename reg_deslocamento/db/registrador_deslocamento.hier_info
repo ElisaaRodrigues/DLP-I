@@ -1,0 +1,28 @@
+|registrador_deslocamento
+clk => q[7].CLK
+clk => q[6].CLK
+clk => q[5].CLK
+clk => q[4].CLK
+clk => q[3].CLK
+clk => q[2].CLK
+clk => q[1].CLK
+clk => q[0].CLK
+rst => q[7].ACLR
+rst => q[6].ACLR
+rst => q[5].ACLR
+rst => q[4].ACLR
+rst => q[3].ACLR
+rst => q[2].ACLR
+rst => q[1].ACLR
+rst => q[0].ACLR
+din => q[0].DATAIN
+qout[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+qout[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+qout[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+qout[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+qout[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+qout[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+qout[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+qout[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+
+

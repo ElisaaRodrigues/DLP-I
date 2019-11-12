@@ -1,0 +1,644 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "09/24/2019 18:17:12"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    binTObcd
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module binTObcd_vlg_sample_tst(
+	binario,
+	sampler_tx
+);
+input [13:0] binario;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(binario)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module binTObcd_vlg_check_tst (
+	centena,
+	dezena,
+	milhar,
+	unidade,
+	sampler_rx
+);
+input [3:0] centena;
+input [3:0] dezena;
+input [3:0] milhar;
+input [3:0] unidade;
+input sampler_rx;
+
+reg [3:0] centena_expected;
+reg [3:0] dezena_expected;
+reg [3:0] milhar_expected;
+reg [3:0] unidade_expected;
+
+reg [3:0] centena_prev;
+reg [3:0] dezena_prev;
+reg [3:0] milhar_prev;
+reg [3:0] unidade_prev;
+
+reg [3:0] centena_expected_prev;
+reg [3:0] dezena_expected_prev;
+reg [3:0] milhar_expected_prev;
+reg [3:0] unidade_expected_prev;
+
+reg [3:0] last_centena_exp;
+reg [3:0] last_dezena_exp;
+reg [3:0] last_milhar_exp;
+reg [3:0] last_unidade_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:4] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 4'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	centena_prev = centena;
+	dezena_prev = dezena;
+	milhar_prev = milhar;
+	unidade_prev = unidade;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	centena_expected_prev = centena_expected;
+	dezena_expected_prev = dezena_expected;
+	milhar_expected_prev = milhar_expected;
+	unidade_expected_prev = unidade_expected;
+end
+
+
+// expected centena[ 3 ]
+initial
+begin
+	centena_expected[3] = 1'bX;
+end 
+// expected centena[ 2 ]
+initial
+begin
+	centena_expected[2] = 1'bX;
+end 
+// expected centena[ 1 ]
+initial
+begin
+	centena_expected[1] = 1'bX;
+end 
+// expected centena[ 0 ]
+initial
+begin
+	centena_expected[0] = 1'bX;
+end 
+// expected dezena[ 3 ]
+initial
+begin
+	dezena_expected[3] = 1'bX;
+end 
+// expected dezena[ 2 ]
+initial
+begin
+	dezena_expected[2] = 1'bX;
+end 
+// expected dezena[ 1 ]
+initial
+begin
+	dezena_expected[1] = 1'bX;
+end 
+// expected dezena[ 0 ]
+initial
+begin
+	dezena_expected[0] = 1'bX;
+end 
+// expected milhar[ 3 ]
+initial
+begin
+	milhar_expected[3] = 1'bX;
+end 
+// expected milhar[ 2 ]
+initial
+begin
+	milhar_expected[2] = 1'bX;
+end 
+// expected milhar[ 1 ]
+initial
+begin
+	milhar_expected[1] = 1'bX;
+end 
+// expected milhar[ 0 ]
+initial
+begin
+	milhar_expected[0] = 1'bX;
+end 
+// expected unidade[ 3 ]
+initial
+begin
+	unidade_expected[3] = 1'bX;
+end 
+// expected unidade[ 2 ]
+initial
+begin
+	unidade_expected[2] = 1'bX;
+end 
+// expected unidade[ 1 ]
+initial
+begin
+	unidade_expected[1] = 1'bX;
+end 
+// expected unidade[ 0 ]
+initial
+begin
+	unidade_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(centena_expected or centena or dezena_expected or dezena or milhar_expected or milhar or unidade_expected or unidade)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected centena = %b | expected dezena = %b | expected milhar = %b | expected unidade = %b | ",centena_expected_prev,dezena_expected_prev,milhar_expected_prev,unidade_expected_prev);
+	$display("| real centena = %b | real dezena = %b | real milhar = %b | real unidade = %b | ",centena_prev,dezena_prev,milhar_prev,unidade_prev);
+`endif
+	if (
+		( centena_expected_prev[0] !== 1'bx ) && ( centena_prev[0] !== centena_expected_prev[0] )
+		&& ((centena_expected_prev[0] !== last_centena_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port centena[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", centena_expected_prev);
+		$display ("     Real value = %b", centena_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_centena_exp[0] = centena_expected_prev[0];
+	end
+	if (
+		( centena_expected_prev[1] !== 1'bx ) && ( centena_prev[1] !== centena_expected_prev[1] )
+		&& ((centena_expected_prev[1] !== last_centena_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port centena[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", centena_expected_prev);
+		$display ("     Real value = %b", centena_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_centena_exp[1] = centena_expected_prev[1];
+	end
+	if (
+		( centena_expected_prev[2] !== 1'bx ) && ( centena_prev[2] !== centena_expected_prev[2] )
+		&& ((centena_expected_prev[2] !== last_centena_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port centena[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", centena_expected_prev);
+		$display ("     Real value = %b", centena_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_centena_exp[2] = centena_expected_prev[2];
+	end
+	if (
+		( centena_expected_prev[3] !== 1'bx ) && ( centena_prev[3] !== centena_expected_prev[3] )
+		&& ((centena_expected_prev[3] !== last_centena_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port centena[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", centena_expected_prev);
+		$display ("     Real value = %b", centena_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_centena_exp[3] = centena_expected_prev[3];
+	end
+	if (
+		( dezena_expected_prev[0] !== 1'bx ) && ( dezena_prev[0] !== dezena_expected_prev[0] )
+		&& ((dezena_expected_prev[0] !== last_dezena_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dezena[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dezena_expected_prev);
+		$display ("     Real value = %b", dezena_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_dezena_exp[0] = dezena_expected_prev[0];
+	end
+	if (
+		( dezena_expected_prev[1] !== 1'bx ) && ( dezena_prev[1] !== dezena_expected_prev[1] )
+		&& ((dezena_expected_prev[1] !== last_dezena_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dezena[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dezena_expected_prev);
+		$display ("     Real value = %b", dezena_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_dezena_exp[1] = dezena_expected_prev[1];
+	end
+	if (
+		( dezena_expected_prev[2] !== 1'bx ) && ( dezena_prev[2] !== dezena_expected_prev[2] )
+		&& ((dezena_expected_prev[2] !== last_dezena_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dezena[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dezena_expected_prev);
+		$display ("     Real value = %b", dezena_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_dezena_exp[2] = dezena_expected_prev[2];
+	end
+	if (
+		( dezena_expected_prev[3] !== 1'bx ) && ( dezena_prev[3] !== dezena_expected_prev[3] )
+		&& ((dezena_expected_prev[3] !== last_dezena_exp[3]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dezena[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dezena_expected_prev);
+		$display ("     Real value = %b", dezena_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_dezena_exp[3] = dezena_expected_prev[3];
+	end
+	if (
+		( milhar_expected_prev[0] !== 1'bx ) && ( milhar_prev[0] !== milhar_expected_prev[0] )
+		&& ((milhar_expected_prev[0] !== last_milhar_exp[0]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port milhar[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", milhar_expected_prev);
+		$display ("     Real value = %b", milhar_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_milhar_exp[0] = milhar_expected_prev[0];
+	end
+	if (
+		( milhar_expected_prev[1] !== 1'bx ) && ( milhar_prev[1] !== milhar_expected_prev[1] )
+		&& ((milhar_expected_prev[1] !== last_milhar_exp[1]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port milhar[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", milhar_expected_prev);
+		$display ("     Real value = %b", milhar_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_milhar_exp[1] = milhar_expected_prev[1];
+	end
+	if (
+		( milhar_expected_prev[2] !== 1'bx ) && ( milhar_prev[2] !== milhar_expected_prev[2] )
+		&& ((milhar_expected_prev[2] !== last_milhar_exp[2]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port milhar[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", milhar_expected_prev);
+		$display ("     Real value = %b", milhar_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_milhar_exp[2] = milhar_expected_prev[2];
+	end
+	if (
+		( milhar_expected_prev[3] !== 1'bx ) && ( milhar_prev[3] !== milhar_expected_prev[3] )
+		&& ((milhar_expected_prev[3] !== last_milhar_exp[3]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port milhar[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", milhar_expected_prev);
+		$display ("     Real value = %b", milhar_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_milhar_exp[3] = milhar_expected_prev[3];
+	end
+	if (
+		( unidade_expected_prev[0] !== 1'bx ) && ( unidade_prev[0] !== unidade_expected_prev[0] )
+		&& ((unidade_expected_prev[0] !== last_unidade_exp[0]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port unidade[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", unidade_expected_prev);
+		$display ("     Real value = %b", unidade_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_unidade_exp[0] = unidade_expected_prev[0];
+	end
+	if (
+		( unidade_expected_prev[1] !== 1'bx ) && ( unidade_prev[1] !== unidade_expected_prev[1] )
+		&& ((unidade_expected_prev[1] !== last_unidade_exp[1]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port unidade[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", unidade_expected_prev);
+		$display ("     Real value = %b", unidade_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_unidade_exp[1] = unidade_expected_prev[1];
+	end
+	if (
+		( unidade_expected_prev[2] !== 1'bx ) && ( unidade_prev[2] !== unidade_expected_prev[2] )
+		&& ((unidade_expected_prev[2] !== last_unidade_exp[2]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port unidade[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", unidade_expected_prev);
+		$display ("     Real value = %b", unidade_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_unidade_exp[2] = unidade_expected_prev[2];
+	end
+	if (
+		( unidade_expected_prev[3] !== 1'bx ) && ( unidade_prev[3] !== unidade_expected_prev[3] )
+		&& ((unidade_expected_prev[3] !== last_unidade_exp[3]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port unidade[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", unidade_expected_prev);
+		$display ("     Real value = %b", unidade_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_unidade_exp[3] = unidade_expected_prev[3];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module binTObcd_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [13:0] binario;
+// wires                                               
+wire [3:0] centena;
+wire [3:0] dezena;
+wire [3:0] milhar;
+wire [3:0] unidade;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+binTObcd i1 (
+// port map - connection between master ports and signals/registers   
+	.binario(binario),
+	.centena(centena),
+	.dezena(dezena),
+	.milhar(milhar),
+	.unidade(unidade)
+);
+// binario[ 13 ]
+initial
+begin
+	binario[13] = 1'b0;
+	binario[13] = #35000 1'b1;
+	binario[13] = #10000 1'b0;
+end 
+// binario[ 12 ]
+initial
+begin
+	binario[12] = 1'b0;
+	binario[12] = #10000 1'b1;
+	binario[12] = #20000 1'b0;
+	binario[12] = #5000 1'b1;
+	binario[12] = #5000 1'b0;
+	binario[12] = #5000 1'b1;
+	binario[12] = #5000 1'b0;
+	binario[12] = #5000 1'b1;
+	binario[12] = #5000 1'b0;
+	binario[12] = #5000 1'b1;
+	binario[12] = #5000 1'b0;
+end 
+// binario[ 11 ]
+initial
+begin
+	binario[11] = 1'b0;
+	binario[11] = #10000 1'b1;
+	binario[11] = #10000 1'b0;
+	binario[11] = #5000 1'b1;
+	binario[11] = #15000 1'b0;
+	binario[11] = #15000 1'b1;
+	binario[11] = #5000 1'b0;
+	binario[11] = #5000 1'b1;
+	binario[11] = #5000 1'b0;
+end 
+// binario[ 10 ]
+initial
+begin
+	binario[10] = 1'b0;
+	binario[10] = #10000 1'b1;
+	binario[10] = #5000 1'b0;
+	binario[10] = #15000 1'b1;
+	binario[10] = #10000 1'b0;
+	binario[10] = #15000 1'b1;
+	binario[10] = #15000 1'b0;
+end 
+// binario[ 9 ]
+initial
+begin
+	binario[9] = 1'b0;
+	binario[9] = #10000 1'b1;
+	binario[9] = #10000 1'b0;
+	binario[9] = #10000 1'b1;
+	binario[9] = #5000 1'b0;
+	binario[9] = #10000 1'b1;
+	binario[9] = #5000 1'b0;
+	binario[9] = #10000 1'b1;
+	binario[9] = #10000 1'b0;
+end 
+// binario[ 8 ]
+initial
+begin
+	binario[8] = 1'b0;
+	binario[8] = #15000 1'b1;
+	binario[8] = #5000 1'b0;
+	binario[8] = #15000 1'b1;
+	binario[8] = #15000 1'b0;
+	binario[8] = #15000 1'b1;
+	binario[8] = #5000 1'b0;
+end 
+// binario[ 7 ]
+initial
+begin
+	binario[7] = 1'b0;
+	binario[7] = #25000 1'b1;
+	binario[7] = #15000 1'b0;
+end 
+// binario[ 6 ]
+initial
+begin
+	binario[6] = 1'b0;
+	binario[6] = #15000 1'b1;
+	binario[6] = #15000 1'b0;
+	binario[6] = #5000 1'b1;
+	binario[6] = #15000 1'b0;
+end 
+// binario[ 5 ]
+initial
+begin
+	binario[5] = 1'b0;
+	binario[5] = #20000 1'b1;
+	binario[5] = #5000 1'b0;
+	binario[5] = #10000 1'b1;
+	binario[5] = #5000 1'b0;
+	binario[5] = #5000 1'b1;
+	binario[5] = #5000 1'b0;
+	binario[5] = #10000 1'b1;
+	binario[5] = #10000 1'b0;
+end 
+// binario[ 4 ]
+initial
+begin
+	binario[4] = 1'b0;
+	binario[4] = #10000 1'b1;
+	binario[4] = #5000 1'b0;
+	binario[4] = #10000 1'b1;
+	binario[4] = #10000 1'b0;
+	binario[4] = #5000 1'b1;
+	binario[4] = #15000 1'b0;
+	binario[4] = #5000 1'b1;
+	binario[4] = #5000 1'b0;
+end 
+// binario[ 3 ]
+initial
+begin
+	binario[3] = 1'b0;
+	binario[3] = #10000 1'b1;
+	binario[3] = #15000 1'b0;
+	binario[3] = #5000 1'b1;
+	binario[3] = #5000 1'b0;
+	binario[3] = #10000 1'b1;
+	binario[3] = #5000 1'b0;
+	binario[3] = #10000 1'b1;
+	binario[3] = #5000 1'b0;
+end 
+// binario[ 2 ]
+initial
+begin
+	binario[2] = 1'b0;
+	binario[2] = #10000 1'b1;
+	binario[2] = #10000 1'b0;
+	binario[2] = #5000 1'b1;
+	binario[2] = #10000 1'b0;
+	binario[2] = #5000 1'b1;
+	binario[2] = #15000 1'b0;
+	binario[2] = #5000 1'b1;
+	binario[2] = #10000 1'b0;
+end 
+// binario[ 1 ]
+initial
+begin
+	binario[1] = 1'b0;
+	binario[1] = #10000 1'b1;
+	binario[1] = #10000 1'b0;
+	binario[1] = #5000 1'b1;
+	binario[1] = #5000 1'b0;
+	binario[1] = #5000 1'b1;
+	binario[1] = #5000 1'b0;
+	binario[1] = #10000 1'b1;
+	binario[1] = #15000 1'b0;
+end 
+// binario[ 0 ]
+initial
+begin
+	binario[0] = 1'b0;
+	binario[0] = #10000 1'b1;
+	binario[0] = #5000 1'b0;
+	binario[0] = #5000 1'b1;
+	binario[0] = #5000 1'b0;
+	binario[0] = #5000 1'b1;
+	binario[0] = #5000 1'b0;
+	binario[0] = #15000 1'b1;
+	binario[0] = #15000 1'b0;
+end 
+
+binTObcd_vlg_sample_tst tb_sample (
+	.binario(binario),
+	.sampler_tx(sampler)
+);
+
+binTObcd_vlg_check_tst tb_out(
+	.centena(centena),
+	.dezena(dezena),
+	.milhar(milhar),
+	.unidade(unidade),
+	.sampler_rx(sampler)
+);
+endmodule
+

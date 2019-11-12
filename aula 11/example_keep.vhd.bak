@@ -1,0 +1,11 @@
+architecture example OF delay_line is
+	signal a, b, c : bit;
+	attribute keep: boolean;
+	attribute keep Of a, b, c: signal is true;
+	
+begin	
+	a <= not x;
+	b <= not a;
+	c <= not b;
+	y <= not c;
+end architecture;

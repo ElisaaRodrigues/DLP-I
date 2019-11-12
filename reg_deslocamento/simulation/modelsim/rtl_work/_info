@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/elisa.r/DLP/reg_deslocamento/simulation/modelsim
+Creg
+aarch_reg1
+eregistrador_deslocamento
+DAx4 work 24 registrador_deslocamento 9 arch_reg1 22 :V2PmL]^PdA3nl8BMDl<A0
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 DEx4 work 24 registrador_deslocamento 0 22 mjOVP@f_`cce2?oW?1DLD3
+Z4 w1570449651
+Z5 d/home/elisa.r/DLP/reg_deslocamento/simulation/modelsim
+Z6 8/home/elisa.r/DLP/reg_deslocamento/registrador_deslocamento.vhd
+Z7 F/home/elisa.r/DLP/reg_deslocamento/registrador_deslocamento.vhd
+l0
+L63
+V>oX1]PL;z1RG?kclQFjEK0
+!s100 l;8jgLY;9aHEVYa_03M<d0
+Z8 OV;C;10.1d;51
+31
+!i10b 0
+Z9 !s108 1570449681.221819
+Z10 !s90 -reportprogress|300|-93|-work|work|/home/elisa.r/DLP/reg_deslocamento/registrador_deslocamento.vhd|
+Z11 !s107 /home/elisa.r/DLP/reg_deslocamento/registrador_deslocamento.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+Eregistrador_deslocamento
+R4
+R1
+R2
+R5
+R6
+R7
+l0
+L4
+VmjOVP@f_`cce2?oW?1DLD3
+!s100 Hn=Mk;gbJc8Gz>Bz62oUC1
+R8
+31
+!i10b 1
+R9
+R10
+R11
+R12
+R13
+Aarch_reg2
+R1
+R2
+R3
+l47
+L45
+V=oEeF]l4WdzC9?Kf>Sm^Q0
+!s100 fW6[8>m;^ZnFCLUfnC3PK1
+R8
+31
+!i10b 1
+R9
+R10
+R11
+R12
+R13
+Aarch_reg1
+R1
+R2
+R3
+l16
+L14
+V:V2PmL]^PdA3nl8BMDl<A0
+!s100 m[GCo[K`1ek`:n@khZ_?A1
+R8
+31
+!i10b 1
+R9
+R10
+R11
+R12
+R13

@@ -1,0 +1,21 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity incBIN is
+	generic (N : natural := 3);
+	port(
+	bin_in : in std_logic_vector(N-1 downto 0);
+	bin_out: out std_logic_vector(N-1 downto 0)
+);
+end entity;
+
+
+architecture arch_incBIN to incBIN is
+--signal bin_uns : unsigned(N-1 downto 0);
+
+begin
+	
+	bin_out <= std_logic_vector(unsigned(bin_in)+1);
+
+end architecture;

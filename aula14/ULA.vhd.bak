@@ -1,0 +1,26 @@
+library ieee;
+use.ieee.std_logic_1164.all;
+
+entity ULA is
+
+	port
+	(
+		-- Input ports
+		<name>	: in  <type>;
+		<name>	: in  <type> := <default_value>;
+
+		-- Output ports
+		<name>	: out <type>;
+		<name>	: out <type> := <default_value>
+	);
+end entity;
+
+architecture arch_ULA of ULA is
+
+
+begin
+
+
+
+end architecture;
+

@@ -1,0 +1,47 @@
+|binTObcd
+binario[0] => Div0.IN23
+binario[0] => Mod0.IN27
+binario[1] => Div0.IN22
+binario[1] => Mod0.IN26
+binario[2] => Div0.IN21
+binario[2] => Mod0.IN25
+binario[3] => Div0.IN20
+binario[3] => Mod0.IN24
+binario[4] => Div0.IN19
+binario[4] => Mod0.IN23
+binario[5] => Div0.IN18
+binario[5] => Mod0.IN22
+binario[6] => Div0.IN17
+binario[6] => Mod0.IN21
+binario[7] => Div0.IN16
+binario[7] => Mod0.IN20
+binario[8] => Div0.IN15
+binario[8] => Mod0.IN19
+binario[9] => Div0.IN14
+binario[9] => Mod0.IN18
+binario[10] => Div0.IN13
+binario[10] => Mod0.IN17
+binario[11] => Div0.IN12
+binario[11] => Mod0.IN16
+binario[12] => Div0.IN11
+binario[12] => Mod0.IN15
+binario[13] => Div0.IN10
+binario[13] => Mod0.IN14
+milhar[0] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+milhar[1] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+milhar[2] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+milhar[3] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+centena[0] <= Div1.DB_MAX_OUTPUT_PORT_TYPE
+centena[1] <= Div1.DB_MAX_OUTPUT_PORT_TYPE
+centena[2] <= Div1.DB_MAX_OUTPUT_PORT_TYPE
+centena[3] <= Div1.DB_MAX_OUTPUT_PORT_TYPE
+dezena[0] <= Div2.DB_MAX_OUTPUT_PORT_TYPE
+dezena[1] <= Div2.DB_MAX_OUTPUT_PORT_TYPE
+dezena[2] <= Div2.DB_MAX_OUTPUT_PORT_TYPE
+dezena[3] <= Div2.DB_MAX_OUTPUT_PORT_TYPE
+unidade[0] <= Mod2.DB_MAX_OUTPUT_PORT_TYPE
+unidade[1] <= Mod2.DB_MAX_OUTPUT_PORT_TYPE
+unidade[2] <= Mod2.DB_MAX_OUTPUT_PORT_TYPE
+unidade[3] <= Mod2.DB_MAX_OUTPUT_PORT_TYPE
+
+
