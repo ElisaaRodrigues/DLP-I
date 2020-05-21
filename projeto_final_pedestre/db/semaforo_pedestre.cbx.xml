@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="semaforo_pedestre">
+		<CBX_INST_ENTRY INSTANCE_NAME="|pedestre_final|binTObcd:conversor|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_c5m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pedestre_final|binTObcd:conversor|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_gtl.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,227 @@
+|pedestre_final
+clk_50MHz => count_up:timer_semaforo.clk
+rst_in => count_up:timer_semaforo.rst
+rst_in => tempo_min_carro:conta_tempo_min_carro.rst
+rst_in => semaforo_pedestre:comp_semaforo.rst
+botao_in => semaforo_pedestre:comp_semaforo.botao
+sensor_escuro_in => semaforo_pedestre:comp_semaforo.sensor_escuro
+vd_c_out <= semaforo_pedestre:comp_semaforo.vd_c
+am_c_out <= semaforo_pedestre:comp_semaforo.am_c
+vm_c_out <= semaforo_pedestre:comp_semaforo.vm_c
+vd_p_out <= semaforo_pedestre:comp_semaforo.vd_p
+vm_p_out <= semaforo_pedestre:comp_semaforo.vm_p
+iluminacao_out <= semaforo_pedestre:comp_semaforo.iluminacao
+ssd_unidade[0] <= ssd_unidade.DB_MAX_OUTPUT_PORT_TYPE
+ssd_unidade[1] <= ssd_unidade.DB_MAX_OUTPUT_PORT_TYPE
+ssd_unidade[2] <= ssd_unidade.DB_MAX_OUTPUT_PORT_TYPE
+ssd_unidade[3] <= ssd_unidade.DB_MAX_OUTPUT_PORT_TYPE
+ssd_unidade[4] <= ssd_unidade.DB_MAX_OUTPUT_PORT_TYPE
+ssd_unidade[5] <= ssd_unidade.DB_MAX_OUTPUT_PORT_TYPE
+ssd_unidade[6] <= ssd_unidade.DB_MAX_OUTPUT_PORT_TYPE
+ssd_dezena[0] <= ssd_dezena.DB_MAX_OUTPUT_PORT_TYPE
+ssd_dezena[1] <= ssd_dezena.DB_MAX_OUTPUT_PORT_TYPE
+ssd_dezena[2] <= ssd_dezena.DB_MAX_OUTPUT_PORT_TYPE
+ssd_dezena[3] <= ssd_dezena.DB_MAX_OUTPUT_PORT_TYPE
+ssd_dezena[4] <= ssd_dezena.DB_MAX_OUTPUT_PORT_TYPE
+ssd_dezena[5] <= ssd_dezena.DB_MAX_OUTPUT_PORT_TYPE
+ssd_dezena[6] <= ssd_dezena.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pedestre_final|count_up:timer_semaforo
+clk => count.CLK
+rst => count.ACLR
+q[0] <= count.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= <GND>
+q[2] <= <GND>
+q[3] <= <GND>
+clk_out <= count.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pedestre_final|tempo_min_carro:conta_tempo_min_carro
+clk => q~reg0.CLK
+clk => \l1:count[0].CLK
+clk => \l1:count[1].CLK
+clk => \l1:count[2].CLK
+clk => \l1:count[3].CLK
+clk => \l1:count[4].CLK
+clk => \l1:count[5].CLK
+clk => \l1:count[6].CLK
+rst => q~reg0.ACLR
+rst => \l1:count[0].ACLR
+rst => \l1:count[1].ACLR
+rst => \l1:count[2].ACLR
+rst => \l1:count[3].ACLR
+rst => \l1:count[4].ACLR
+rst => \l1:count[5].ACLR
+rst => \l1:count[6].ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zera_contador => count.OUTPUTSELECT
+zera_contador => count.OUTPUTSELECT
+zera_contador => count.OUTPUTSELECT
+zera_contador => count.OUTPUTSELECT
+zera_contador => count.OUTPUTSELECT
+zera_contador => count.OUTPUTSELECT
+zera_contador => count.OUTPUTSELECT
+zera_contador => q.OUTPUTSELECT
+
+
+|pedestre_final|semaforo_pedestre:comp_semaforo
+botao => Selector1.IN3
+botao => process_1.IN0
+botao => Selector0.IN2
+vd_c <= vd_c.DB_MAX_OUTPUT_PORT_TYPE
+am_c <= am_c.DB_MAX_OUTPUT_PORT_TYPE
+vm_c <= vm_c.DB_MAX_OUTPUT_PORT_TYPE
+vd_p <= vd_p.DB_MAX_OUTPUT_PORT_TYPE
+vm_p <= desliga_led.DB_MAX_OUTPUT_PORT_TYPE
+iluminacao <= iluminacao.DB_MAX_OUTPUT_PORT_TYPE
+sensor_escuro => iluminacao.DATAA
+saida_display[0] <= saida_display[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida_display[1] <= saida_display[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida_display[2] <= saida_display[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida_display[3] <= saida_display[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida_display[4] <= saida_display[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => saida_display[0]~reg0.CLK
+clk => saida_display[1]~reg0.CLK
+clk => saida_display[2]~reg0.CLK
+clk => saida_display[3]~reg0.CLK
+clk => saida_display[4]~reg0.CLK
+clk => incrementador[0].CLK
+clk => incrementador[1].CLK
+clk => incrementador[2].CLK
+clk => incrementador[3].CLK
+clk => incrementador[4].CLK
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => pr_state~4.DATAIN
+rst => incrementador[0].ACLR
+rst => incrementador[1].ACLR
+rst => incrementador[2].ACLR
+rst => incrementador[3].ACLR
+rst => incrementador[4].ACLR
+rst => contador[0].ACLR
+rst => contador[1].ACLR
+rst => contador[2].ACLR
+rst => contador[3].ACLR
+rst => contador[4].ACLR
+rst => contador[5].ACLR
+rst => pr_state~6.DATAIN
+rst => saida_display[0]~reg0.ENA
+rst => saida_display[4]~reg0.ENA
+rst => saida_display[3]~reg0.ENA
+rst => saida_display[2]~reg0.ENA
+rst => saida_display[1]~reg0.ENA
+desliga_led <= desliga_led.DB_MAX_OUTPUT_PORT_TYPE
+zera_tempo_carro <= zera_tempo_carro.DB_MAX_OUTPUT_PORT_TYPE
+entrada_tempo_carro => process_1.IN1
+
+
+|pedestre_final|binTObcd:conversor
+binario[0] => Div0.IN8
+binario[0] => Mod0.IN9
+binario[1] => Div0.IN7
+binario[1] => Mod0.IN8
+binario[2] => Div0.IN6
+binario[2] => Mod0.IN7
+binario[3] => Div0.IN5
+binario[3] => Mod0.IN6
+binario[4] => Div0.IN4
+binario[4] => Mod0.IN5
+dezena[0] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+dezena[1] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+dezena[2] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+dezena[3] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+unidade[0] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+unidade[1] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+unidade[2] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+unidade[3] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pedestre_final|bin2ssd:mostra_unidade_display
+tipo => ssd.OUTPUTSELECT
+tipo => ssd.OUTPUTSELECT
+tipo => ssd.OUTPUTSELECT
+tipo => ssd.OUTPUTSELECT
+tipo => ssd.OUTPUTSELECT
+tipo => ssd.OUTPUTSELECT
+tipo => ssd.OUTPUTSELECT
+bin[0] => Mux0.IN19
+bin[0] => Mux1.IN19
+bin[0] => Mux2.IN10
+bin[0] => Mux3.IN19
+bin[0] => Mux4.IN10
+bin[0] => Mux5.IN10
+bin[0] => Mux6.IN19
+bin[1] => Mux0.IN18
+bin[1] => Mux1.IN18
+bin[1] => Mux2.IN9
+bin[1] => Mux3.IN18
+bin[1] => Mux4.IN9
+bin[1] => Mux5.IN9
+bin[1] => Mux6.IN18
+bin[2] => Mux0.IN17
+bin[2] => Mux1.IN17
+bin[2] => Mux2.IN8
+bin[2] => Mux3.IN17
+bin[2] => Mux4.IN8
+bin[2] => Mux5.IN8
+bin[2] => Mux6.IN17
+bin[3] => Mux0.IN16
+bin[3] => Mux1.IN16
+bin[3] => Mux3.IN16
+bin[3] => Mux6.IN16
+ssd[0] <= ssd.DB_MAX_OUTPUT_PORT_TYPE
+ssd[1] <= ssd.DB_MAX_OUTPUT_PORT_TYPE
+ssd[2] <= ssd.DB_MAX_OUTPUT_PORT_TYPE
+ssd[3] <= ssd.DB_MAX_OUTPUT_PORT_TYPE
+ssd[4] <= ssd.DB_MAX_OUTPUT_PORT_TYPE
+ssd[5] <= ssd.DB_MAX_OUTPUT_PORT_TYPE
+ssd[6] <= ssd.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pedestre_final|bin2ssd:mostra_dezena_display
+tipo => ssd.OUTPUTSELECT
+tipo => ssd.OUTPUTSELECT
+tipo => ssd.OUTPUTSELECT
+tipo => ssd.OUTPUTSELECT
+tipo => ssd.OUTPUTSELECT
+tipo => ssd.OUTPUTSELECT
+tipo => ssd.OUTPUTSELECT
+bin[0] => Mux0.IN19
+bin[0] => Mux1.IN19
+bin[0] => Mux2.IN10
+bin[0] => Mux3.IN19
+bin[0] => Mux4.IN10
+bin[0] => Mux5.IN10
+bin[0] => Mux6.IN19
+bin[1] => Mux0.IN18
+bin[1] => Mux1.IN18
+bin[1] => Mux2.IN9
+bin[1] => Mux3.IN18
+bin[1] => Mux4.IN9
+bin[1] => Mux5.IN9
+bin[1] => Mux6.IN18
+bin[2] => Mux0.IN17
+bin[2] => Mux1.IN17
+bin[2] => Mux2.IN8
+bin[2] => Mux3.IN17
+bin[2] => Mux4.IN8
+bin[2] => Mux5.IN8
+bin[2] => Mux6.IN17
+bin[3] => Mux0.IN16
+bin[3] => Mux1.IN16
+bin[3] => Mux3.IN16
+bin[3] => Mux6.IN16
+ssd[0] <= ssd.DB_MAX_OUTPUT_PORT_TYPE
+ssd[1] <= ssd.DB_MAX_OUTPUT_PORT_TYPE
+ssd[2] <= ssd.DB_MAX_OUTPUT_PORT_TYPE
+ssd[3] <= ssd.DB_MAX_OUTPUT_PORT_TYPE
+ssd[4] <= ssd.DB_MAX_OUTPUT_PORT_TYPE
+ssd[5] <= ssd.DB_MAX_OUTPUT_PORT_TYPE
+ssd[6] <= ssd.DB_MAX_OUTPUT_PORT_TYPE
+
+

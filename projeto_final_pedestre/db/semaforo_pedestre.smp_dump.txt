@@ -1,0 +1,7 @@
+
+State Machine - |pedestre_final|semaforo_pedestre:comp_semaforo|pr_state
+Name pr_state.wt pr_state.aberto pr_state.amarelo pr_state.fechado 
+pr_state.fechado 0 0 0 0 
+pr_state.amarelo 0 0 1 1 
+pr_state.aberto 0 1 0 1 
+pr_state.wt 1 0 0 1 

@@ -1,0 +1,23 @@
+Quartus II Archive log --	/home/elisa.r/DLP/projeto_final_pedestre/simulation/modelsim/semaforo_pedestre.qarlog
+
+Archive:	/home/elisa.r/DLP/projeto_final_pedestre/simulation/modelsim/semaforo_pedestre.qar
+Date:		Tue Dec 10 23:20:04 2019
+Quartus II 32-bit		13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+
+	=========== Files Selected: ===========
+/home/elisa.r/DLP/projeto_final_pedestre/bin2ssd.vhd
+/home/elisa.r/DLP/projeto_final_pedestre/binTObcd.vhd
+/home/elisa.r/DLP/projeto_final_pedestre/count_up.vhd
+/home/elisa.r/DLP/projeto_final_pedestre/incremental_db/compiled_partitions/semaforo_pedestre.db_info
+/home/elisa.r/DLP/projeto_final_pedestre/pedestre_final.vhd
+/home/elisa.r/DLP/projeto_final_pedestre/semaforo_pedestre.qpf
+/home/elisa.r/DLP/projeto_final_pedestre/semaforo_pedestre.qsf
+/home/elisa.r/DLP/projeto_final_pedestre/semaforo_pedestre.vhd
+/home/elisa.r/DLP/projeto_final_pedestre/simulation/modelsim/tb_pedestre_final.do
+/home/elisa.r/DLP/projeto_final_pedestre/simulation/modelsim/wave_final.do
+/home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd
+/opt/altera/13.0sp1/quartus/linux/assignment_defaults.qdf
+	======= Total: 12 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

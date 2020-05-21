@@ -1,0 +1,225 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/elisa.r/DLP/projeto_final_pedestre/simulation/modelsim
+Ebin2ssd
+Z1 w1575917918
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 d/home/elisa.r/DLP/projeto_final_pedestre/simulation/modelsim
+Z6 8../../bin2ssd.vhd
+Z7 F../../bin2ssd.vhd
+l0
+L6
+VAHaKHUbh`c`?PSdQ;<4?W1
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1575928843.787684
+Z10 !s90 -reportprogress|300|-93|-work|work|../../bin2ssd.vhd|
+Z11 !s107 ../../bin2ssd.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 ]FINjBY]M]=6<6]iDl?Q`1
+!i10b 1
+Av1
+R2
+R3
+R4
+DEx4 work 7 bin2ssd 0 22 AHaKHUbh`c`?PSdQ;<4?W1
+l18
+L15
+V]CfUF:f>GH4Ha^mR><ZC:1
+!s100 Ndl:IzV<06XQ[YT5jH;6O0
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!i10b 1
+Ebintobcd
+Z14 w1575923289
+R2
+R3
+R4
+R5
+Z15 8/home/elisa.r/DLP/projeto_final_pedestre/binTObcd.vhd
+Z16 F/home/elisa.r/DLP/projeto_final_pedestre/binTObcd.vhd
+l0
+L5
+V7_Khc@:VVA;YnKCLRW<0z3
+R8
+31
+Z17 !s108 1575923412.097677
+Z18 !s90 -reportprogress|300|-93|-work|work|/home/elisa.r/DLP/projeto_final_pedestre/binTObcd.vhd|
+Z19 !s107 /home/elisa.r/DLP/projeto_final_pedestre/binTObcd.vhd|
+R12
+R13
+!s100 DilO2HnVmV0EHh7S0j1O20
+!i10b 1
+Aarch_bintobcd
+R2
+R3
+R4
+DEx4 work 8 bintobcd 0 22 7_Khc@:VVA;YnKCLRW<0z3
+l19
+L16
+VRfB::bzR90j08S3@6gJe72
+R8
+31
+R17
+R18
+R19
+R12
+R13
+!s100 U;F:lGHKMkC7oa00HPzJg2
+!i10b 1
+Ecount_up
+Z20 w1575841297
+R2
+R3
+R4
+R5
+Z21 8../../count_up.vhd
+Z22 F../../count_up.vhd
+l0
+L6
+Vj0LigD7mDD?cGANNQ3NoL0
+R8
+31
+Z23 !s108 1575928842.351078
+Z24 !s90 -reportprogress|300|-93|-work|work|../../count_up.vhd|
+Z25 !s107 ../../count_up.vhd|
+R12
+R13
+!s100 6iDQfgd`HKG_II2akhQ__0
+!i10b 1
+Av1
+R2
+R3
+R4
+DEx4 work 8 count_up 0 22 j0LigD7mDD?cGANNQ3NoL0
+l23
+L19
+V[nTf`CzF]ozGY4Bdz3f5;2
+R8
+31
+R23
+R24
+R25
+R12
+R13
+!s100 0]`MTY1BLA1ZZl7JRU^]W2
+!i10b 1
+Epedestre_final
+Z26 w1575928627
+R3
+R4
+R5
+Z27 8../../pedestre_final.vhd
+Z28 F../../pedestre_final.vhd
+l0
+L4
+VB2SVC<ISAm6EA6AI__e;f0
+R8
+31
+Z29 !s108 1575928843.131082
+Z30 !s90 -reportprogress|300|-93|-work|work|../../pedestre_final.vhd|
+Z31 !s107 ../../pedestre_final.vhd|
+R12
+R13
+!s100 WocjQPcU@eM1W?ESnZ5=O3
+!i10b 1
+Aprojeto
+R3
+R4
+DEx4 work 14 pedestre_final 0 22 B2SVC<ISAm6EA6AI__e;f0
+l106
+L26
+VL@I^a=Q80l>dPf2OYzf2:3
+R8
+31
+R29
+R30
+R31
+R12
+R13
+!s100 8>01hT1W_hjSE_zS>A>>h3
+!i10b 1
+Esemaforo_pedestre
+Z32 w1575928612
+R2
+R3
+R4
+R5
+Z33 8../../semaforo_pedestre.vhd
+Z34 F../../semaforo_pedestre.vhd
+l0
+L15
+VH[d9XAQEj^FFbXoPgA<z62
+R8
+31
+Z35 !s108 1575928841.593626
+Z36 !s90 -reportprogress|300|-93|-work|work|../../semaforo_pedestre.vhd|
+Z37 !s107 ../../semaforo_pedestre.vhd|
+R12
+R13
+!s100 KgSS19fZ[^kUlX]iAWiBH2
+!i10b 1
+Asemaforo
+R2
+R3
+R4
+DEx4 work 17 semaforo_pedestre 0 22 H[d9XAQEj^FFbXoPgA<z62
+l45
+L38
+VR8_^al^XD?7J_KkB_P0ZS0
+R8
+31
+R35
+R36
+R37
+R12
+R13
+!s100 K2<0F@Fj5f4j6LnOFHPb<3
+!i10b 1
+Etempo_min_carro
+Z38 w1575927769
+R2
+R3
+R4
+R5
+Z39 8../../tempo_min_carro.vhd
+Z40 F../../tempo_min_carro.vhd
+l0
+L6
+VKTZT_SjN2Y^n^H5ma>a@U1
+!s100 A3ah=_2>]LF3H?8km9G7j3
+R8
+31
+!i10b 1
+Z41 !s108 1575928844.475446
+Z42 !s90 -reportprogress|300|-93|-work|work|../../tempo_min_carro.vhd|
+Z43 !s107 ../../tempo_min_carro.vhd|
+R12
+R13
+Av1
+R2
+R3
+R4
+Z44 DEx4 work 15 tempo_min_carro 0 22 KTZT_SjN2Y^n^H5ma>a@U1
+l19
+L17
+Z45 VUI7>j5a8d;jMaAU[bg1Og2
+Z46 !s100 gX_IAbd62nd9NJ^WO0dVb0
+R8
+31
+!i10b 1
+R41
+R42
+R43
+R12
+R13

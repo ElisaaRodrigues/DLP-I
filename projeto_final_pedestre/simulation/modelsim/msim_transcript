@@ -1,0 +1,998 @@
+# do semaforo_pedestre_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /opt/altera/13.0sp1/modelsim_ae/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/13.0sp1/modelsim_ae/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/elisa.r/DLP/projeto_final_pedestre/semaforo_pedestre.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity semaforo_pedestre
+# -- Compiling architecture semaforo of semaforo_pedestre
+# vcom -93 -work work {/home/elisa.r/DLP/projeto_final_pedestre/count_up.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_up
+# -- Compiling architecture v1 of count_up
+# vcom -93 -work work {/home/elisa.r/DLP/projeto_final_pedestre/pedestre_final.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pedestre_final
+# -- Compiling architecture projeto of pedestre_final
+# vcom -93 -work work {/home/elisa.r/DLP/projeto_final_pedestre/bin2ssd.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2ssd
+# -- Compiling architecture v1 of bin2ssd
+# vcom -93 -work work {/home/elisa.r/DLP/projeto_final_pedestre/binTObcd.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity binTObcd
+# -- Compiling architecture arch_binTObcd of binTObcd
+# vcom -93 -work work {/home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tempo_min_carro
+# -- Compiling architecture v1 of tempo_min_carro
+# 
+do tb_pedestre_final.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity semaforo_pedestre
+# -- Compiling architecture semaforo of semaforo_pedestre
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_up
+# -- Compiling architecture v1 of count_up
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pedestre_final
+# -- Compiling architecture projeto of pedestre_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2ssd
+# -- Compiling architecture v1 of bin2ssd
+# vsim work.pedestre_final 
+# //  ModelSim ALTERA 10.1d Nov  2 2012 Linux 4.19.0-6-amd64
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pedestre_final(projeto)
+# Loading ieee.numeric_std(body)
+# Loading work.count_up(v1)
+# Loading work.tempo_min_carro(v1)
+# Loading work.semaforo_pedestre(semaforo)
+# Loading work.bintobcd(arch_bintobcd)
+# Loading work.bin2ssd(v1)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_dezena_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_unidade_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/conversor
+# ** Fatal: (vsim-3421) Value 61 for count is out of range 0 to 60.
+#    Time: 132 sec  Iteration: 2  Process: /pedestre_final/conta_tempo_min_carro/line__19 File: /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd
+# Fatal error in Process line__19 at /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd line 30
+# 
+# HDL call sequence:
+# Stopped at /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd 30 Process line__19
+# 
+add wave -position 7  sim:/pedestre_final/entrada_tempo_carro_aux
+add wave -position 26  sim:/pedestre_final/controle_de_leds
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/elisa.r/DLP/projeto_final_pedestre/simulation/modelsim/wave_final.do
+do tb_pedestre_final.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity semaforo_pedestre
+# -- Compiling architecture semaforo of semaforo_pedestre
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_up
+# -- Compiling architecture v1 of count_up
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pedestre_final
+# -- Compiling architecture projeto of pedestre_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2ssd
+# -- Compiling architecture v1 of bin2ssd
+# vsim work.pedestre_final 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pedestre_final(projeto)
+# Loading ieee.numeric_std(body)
+# Loading work.count_up(v1)
+# Loading work.tempo_min_carro(v1)
+# Loading work.semaforo_pedestre(semaforo)
+# Loading work.bintobcd(arch_bintobcd)
+# Loading work.bin2ssd(v1)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_dezena_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_unidade_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/conversor
+# ** Fatal: (vsim-3421) Value 61 for count is out of range 0 to 60.
+#    Time: 132 sec  Iteration: 2  Process: /pedestre_final/conta_tempo_min_carro/line__19 File: /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd
+# Fatal error in Process line__19 at /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd line 30
+# 
+# HDL call sequence:
+# Stopped at /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd 30 Process line__19
+# 
+do tb_pedestre_final.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity semaforo_pedestre
+# -- Compiling architecture semaforo of semaforo_pedestre
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_up
+# -- Compiling architecture v1 of count_up
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pedestre_final
+# -- Compiling architecture projeto of pedestre_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2ssd
+# -- Compiling architecture v1 of bin2ssd
+# vsim work.pedestre_final 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pedestre_final(projeto)
+# Loading ieee.numeric_std(body)
+# Loading work.count_up(v1)
+# Loading work.tempo_min_carro(v1)
+# Loading work.semaforo_pedestre(semaforo)
+# Loading work.bintobcd(arch_bintobcd)
+# Loading work.bin2ssd(v1)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_dezena_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_unidade_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/conversor
+# ** Fatal: (vsim-3421) Value 61 for count is out of range 0 to 60.
+#    Time: 132 sec  Iteration: 2  Process: /pedestre_final/conta_tempo_min_carro/line__19 File: /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd
+# Fatal error in Process line__19 at /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd line 30
+# 
+# HDL call sequence:
+# Stopped at /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd 30 Process line__19
+# 
+do tb_pedestre_final.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity semaforo_pedestre
+# -- Compiling architecture semaforo of semaforo_pedestre
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_up
+# -- Compiling architecture v1 of count_up
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pedestre_final
+# -- Compiling architecture projeto of pedestre_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2ssd
+# -- Compiling architecture v1 of bin2ssd
+# vsim work.pedestre_final 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pedestre_final(projeto)
+# Loading ieee.numeric_std(body)
+# Loading work.count_up(v1)
+# Loading work.tempo_min_carro(v1)
+# Loading work.semaforo_pedestre(semaforo)
+# Loading work.bintobcd(arch_bintobcd)
+# Loading work.bin2ssd(v1)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_dezena_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_unidade_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/conversor
+# ** Fatal: (vsim-3421) Value 61 for count is out of range 0 to 60.
+#    Time: 132 sec  Iteration: 2  Process: /pedestre_final/conta_tempo_min_carro/line__19 File: /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd
+# Fatal error in Process line__19 at /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd line 30
+# 
+# HDL call sequence:
+# Stopped at /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd 30 Process line__19
+# 
+do tb_pedestre_final.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity semaforo_pedestre
+# -- Compiling architecture semaforo of semaforo_pedestre
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_up
+# -- Compiling architecture v1 of count_up
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pedestre_final
+# -- Compiling architecture projeto of pedestre_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2ssd
+# -- Compiling architecture v1 of bin2ssd
+# vsim work.pedestre_final 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pedestre_final(projeto)
+# Loading ieee.numeric_std(body)
+# Loading work.count_up(v1)
+# Loading work.tempo_min_carro(v1)
+# Loading work.semaforo_pedestre(semaforo)
+# Loading work.bintobcd(arch_bintobcd)
+# Loading work.bin2ssd(v1)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_dezena_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_unidade_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/conversor
+# ** Fatal: (vsim-3421) Value 61 for count is out of range 0 to 60.
+#    Time: 132 sec  Iteration: 2  Process: /pedestre_final/conta_tempo_min_carro/line__19 File: /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd
+# Fatal error in Process line__19 at /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd line 30
+# 
+# HDL call sequence:
+# Stopped at /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd 30 Process line__19
+# 
+# A time value could not be extracted from the current line
+
+
+do tb_pedestre_final.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity semaforo_pedestre
+# -- Compiling architecture semaforo of semaforo_pedestre
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_up
+# -- Compiling architecture v1 of count_up
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pedestre_final
+# -- Compiling architecture projeto of pedestre_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2ssd
+# -- Compiling architecture v1 of bin2ssd
+# vsim work.pedestre_final 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pedestre_final(projeto)
+# Loading ieee.numeric_std(body)
+# Loading work.count_up(v1)
+# Loading work.tempo_min_carro(v1)
+# Loading work.semaforo_pedestre(semaforo)
+# Loading work.bintobcd(arch_bintobcd)
+# Loading work.bin2ssd(v1)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_dezena_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_unidade_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/conversor
+# ** Fatal: (vsim-3421) Value 61 for count is out of range 0 to 60.
+#    Time: 132 sec  Iteration: 2  Process: /pedestre_final/conta_tempo_min_carro/line__19 File: /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd
+# Fatal error in Process line__19 at /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd line 30
+# 
+# HDL call sequence:
+# Stopped at /home/elisa.r/DLP/projeto_final_pedestre/tempo_min_carro.vhd 30 Process line__19
+# 
+do tb_pedestre_final.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity semaforo_pedestre
+# -- Compiling architecture semaforo of semaforo_pedestre
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_up
+# -- Compiling architecture v1 of count_up
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pedestre_final
+# -- Compiling architecture projeto of pedestre_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2ssd
+# -- Compiling architecture v1 of bin2ssd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tempo_min_carro
+# -- Compiling architecture v1 of tempo_min_carro
+# vsim work.pedestre_final 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pedestre_final(projeto)
+# Loading ieee.numeric_std(body)
+# Loading work.count_up(v1)
+# Loading work.tempo_min_carro(v1)
+# Loading work.semaforo_pedestre(semaforo)
+# Loading work.bintobcd(arch_bintobcd)
+# Loading work.bin2ssd(v1)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_dezena_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_unidade_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/conversor
+add wave -position end  sim:/pedestre_final/comp_semaforo/pr_state
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/elisa.r/DLP/projeto_final_pedestre/simulation/modelsim/wave_final.do
+do tb_pedestre_final.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity semaforo_pedestre
+# -- Compiling architecture semaforo of semaforo_pedestre
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_up
+# -- Compiling architecture v1 of count_up
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pedestre_final
+# -- Compiling architecture projeto of pedestre_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2ssd
+# -- Compiling architecture v1 of bin2ssd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tempo_min_carro
+# -- Compiling architecture v1 of tempo_min_carro
+# vsim work.pedestre_final 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pedestre_final(projeto)
+# Loading ieee.numeric_std(body)
+# Loading work.count_up(v1)
+# Loading work.tempo_min_carro(v1)
+# Loading work.semaforo_pedestre(semaforo)
+# Loading work.bintobcd(arch_bintobcd)
+# Loading work.bin2ssd(v1)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_dezena_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_unidade_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/conversor
+run 1000 sec
+do tb_pedestre_final.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity semaforo_pedestre
+# -- Compiling architecture semaforo of semaforo_pedestre
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_up
+# -- Compiling architecture v1 of count_up
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pedestre_final
+# -- Compiling architecture projeto of pedestre_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2ssd
+# -- Compiling architecture v1 of bin2ssd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tempo_min_carro
+# -- Compiling architecture v1 of tempo_min_carro
+# vsim work.pedestre_final 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pedestre_final(projeto)
+# Loading ieee.numeric_std(body)
+# Loading work.count_up(v1)
+# Loading work.tempo_min_carro(v1)
+# Loading work.semaforo_pedestre(semaforo)
+# Loading work.bintobcd(arch_bintobcd)
+# Loading work.bin2ssd(v1)
+run 200 sec
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_dezena_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_unidade_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/conversor
+# Break in Process line__71 at ../../semaforo_pedestre.vhd line 121
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+run -continue
+# Break in Process line__71 at ../../semaforo_pedestre.vhd line 89
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+add wave -position 8  /pedestre_final/conta_tempo_min_carro/line__19/count
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/elisa.r/DLP/projeto_final_pedestre/simulation/modelsim/wave_final.do
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__71 at ../../semaforo_pedestre.vhd line 89
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__71 at ../../semaforo_pedestre.vhd line 100
+run -continue
+# Break in Process line__71 at ../../semaforo_pedestre.vhd line 100
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__47 at ../../semaforo_pedestre.vhd line 59
+run -continue
+# Break in Process line__71 at ../../semaforo_pedestre.vhd line 100
+run -continue
+do tb_pedestre_final.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity semaforo_pedestre
+# -- Compiling architecture semaforo of semaforo_pedestre
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_up
+# -- Compiling architecture v1 of count_up
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pedestre_final
+# -- Compiling architecture projeto of pedestre_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2ssd
+# -- Compiling architecture v1 of bin2ssd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tempo_min_carro
+# -- Compiling architecture v1 of tempo_min_carro
+# vsim work.pedestre_final 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pedestre_final(projeto)
+# Loading ieee.numeric_std(body)
+# Loading work.count_up(v1)
+# Loading work.tempo_min_carro(v1)
+# Loading work.semaforo_pedestre(semaforo)
+# Loading work.bintobcd(arch_bintobcd)
+# Loading work.bin2ssd(v1)
+# ** Error: (vish-4014) No objects found matching '/pedestre_final/conta_tempo_min_carro/line__19/count'.
+# Executing ONERROR command at macro ./wave_final.do line 11
+do tb_pedestre_final.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity semaforo_pedestre
+# -- Compiling architecture semaforo of semaforo_pedestre
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_up
+# -- Compiling architecture v1 of count_up
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pedestre_final
+# -- Compiling architecture projeto of pedestre_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2ssd
+# -- Compiling architecture v1 of bin2ssd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tempo_min_carro
+# -- Compiling architecture v1 of tempo_min_carro
+# vsim work.pedestre_final 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pedestre_final(projeto)
+# Loading ieee.numeric_std(body)
+# Loading work.count_up(v1)
+# Loading work.tempo_min_carro(v1)
+# Loading work.semaforo_pedestre(semaforo)
+# Loading work.bintobcd(arch_bintobcd)
+# Loading work.bin2ssd(v1)
+run 200 sec
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_dezena_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_unidade_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/conversor
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/elisa.r/DLP/projeto_final_pedestre/simulation/modelsim/wave_final.do
+do tb_pedestre_final.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity semaforo_pedestre
+# -- Compiling architecture semaforo of semaforo_pedestre
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_up
+# -- Compiling architecture v1 of count_up
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pedestre_final
+# -- Compiling architecture projeto of pedestre_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2ssd
+# -- Compiling architecture v1 of bin2ssd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tempo_min_carro
+# -- Compiling architecture v1 of tempo_min_carro
+# vsim work.pedestre_final 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pedestre_final(projeto)
+# Loading ieee.numeric_std(body)
+# Loading work.count_up(v1)
+# Loading work.tempo_min_carro(v1)
+# Loading work.semaforo_pedestre(semaforo)
+# Loading work.bintobcd(arch_bintobcd)
+# Loading work.bin2ssd(v1)
+run 200 sec
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_dezena_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_unidade_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/conversor
+do tb_pedestre_final.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity semaforo_pedestre
+# -- Compiling architecture semaforo of semaforo_pedestre
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_up
+# -- Compiling architecture v1 of count_up
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pedestre_final
+# -- Compiling architecture projeto of pedestre_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2ssd
+# -- Compiling architecture v1 of bin2ssd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tempo_min_carro
+# -- Compiling architecture v1 of tempo_min_carro
+# vsim work.pedestre_final 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pedestre_final(projeto)
+# Loading ieee.numeric_std(body)
+# Loading work.count_up(v1)
+# Loading work.tempo_min_carro(v1)
+# Loading work.semaforo_pedestre(semaforo)
+# Loading work.bintobcd(arch_bintobcd)
+# Loading work.bin2ssd(v1)
+run 200 sec
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_dezena_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_unidade_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/conversor
+do tb_pedestre_final.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity semaforo_pedestre
+# -- Compiling architecture semaforo of semaforo_pedestre
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_up
+# -- Compiling architecture v1 of count_up
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pedestre_final
+# -- Compiling architecture projeto of pedestre_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2ssd
+# -- Compiling architecture v1 of bin2ssd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tempo_min_carro
+# -- Compiling architecture v1 of tempo_min_carro
+# vsim work.pedestre_final 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pedestre_final(projeto)
+# Loading ieee.numeric_std(body)
+# Loading work.count_up(v1)
+# Loading work.tempo_min_carro(v1)
+# Loading work.semaforo_pedestre(semaforo)
+# Loading work.bintobcd(arch_bintobcd)
+# Loading work.bin2ssd(v1)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_dezena_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_unidade_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/conversor
+do tb_pedestre_final.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity semaforo_pedestre
+# -- Compiling architecture semaforo of semaforo_pedestre
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_up
+# -- Compiling architecture v1 of count_up
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pedestre_final
+# -- Compiling architecture projeto of pedestre_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2ssd
+# -- Compiling architecture v1 of bin2ssd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tempo_min_carro
+# -- Compiling architecture v1 of tempo_min_carro
+# vsim work.pedestre_final 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pedestre_final(projeto)
+# Loading ieee.numeric_std(body)
+# Loading work.count_up(v1)
+# Loading work.tempo_min_carro(v1)
+# Loading work.semaforo_pedestre(semaforo)
+# Loading work.bintobcd(arch_bintobcd)
+# Loading work.bin2ssd(v1)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_dezena_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_unidade_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/conversor
+run 200 sec
+force -freeze sim:/pedestre_final/botao_in 1 0
+run 1 sec
+run 1 sec
+run 1 sec
+run 1 sec
+run 1 sec
+run 20 sec
+force -freeze sim:/pedestre_final/botao_in 0 0
+run 20 sec
+# ** Fatal: (vsim-3421) Value 21 for incrementador is out of range 0 to 20.
+#    Time: 536 sec  Iteration: 2  Process: /pedestre_final/comp_semaforo/line__136 File: ../../semaforo_pedestre.vhd
+# Fatal error in Process line__136 at ../../semaforo_pedestre.vhd line 146
+# 
+# HDL call sequence:
+# Stopped at ../../semaforo_pedestre.vhd 146 Process line__136
+# 
+do tb_pedestre_final.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity semaforo_pedestre
+# -- Compiling architecture semaforo of semaforo_pedestre
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_up
+# -- Compiling architecture v1 of count_up
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pedestre_final
+# -- Compiling architecture projeto of pedestre_final
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2ssd
+# -- Compiling architecture v1 of bin2ssd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tempo_min_carro
+# -- Compiling architecture v1 of tempo_min_carro
+# vsim work.pedestre_final 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pedestre_final(projeto)
+# Loading ieee.numeric_std(body)
+# Loading work.count_up(v1)
+# Loading work.tempo_min_carro(v1)
+# Loading work.semaforo_pedestre(semaforo)
+# Loading work.bintobcd(arch_bintobcd)
+# Loading work.bin2ssd(v1)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_dezena_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/mostra_unidade_display
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pedestre_final/conversor
+# ** Fatal: (vsim-3421) Value 21 for incrementador is out of range 0 to 20.
+#    Time: 382 sec  Iteration: 2  Process: /pedestre_final/comp_semaforo/line__136 File: ../../semaforo_pedestre.vhd
+# Fatal error in Process line__136 at ../../semaforo_pedestre.vhd line 146
+# 
+# HDL call sequence:
+# Stopped at ../../semaforo_pedestre.vhd 146 Process line__136
+# 
